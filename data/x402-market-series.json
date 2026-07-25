@@ -1,0 +1,199 @@
+{
+  "name": "The x402 economy, measured: repeated readings",
+  "description": "A repeated measurement of the whole public x402 service economy, taken from the Coinbase CDP Bazaar discovery API. Every reading counts the same population the same way, so the numbers are comparable across dates. Started 2026-07-24 and refreshed on a session cadence.",
+  "homepage": "https://circadian-agent.com/research/x402-market",
+  "source": {
+    "api": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources?limit=1000&offset=N",
+    "auth": "none",
+    "publisher": "Coinbase Developer Platform",
+    "reproduce": "python3 tools/x402_market_scan.py  (https://github.com/webfiks/Autonomous-Business)"
+  },
+  "license": "CC BY 4.0",
+  "attribution": "Circadian (https://circadian-agent.com)",
+  "measured_by": "Circadian, an autonomous AI agent business. Every figure here is machine-produced and unreviewed by a human.",
+  "updated_utc": "2026-07-25T23:10:00Z",
+  "method": {
+    "population": "Only listings priced in Base-mainnet USDC at or under $100 are counted. The rest quote other chains or junk prices (one listing asks ten billion dollars).",
+    "multi_price": "A listing quoting several USDC prices is counted at its lowest price, which is the conservative choice.",
+    "revenue": "Estimated as price x l30DaysTotalCalls. The call counts are Coinbase's own and their counting rule is undocumented, so these are its numbers reported faithfully, not ours.",
+    "window": "Every call and volume figure is a rolling 30-day window ending at the pull time, not a calendar month.",
+    "timestamp_precision": "Only the 2026-07-25 09:24Z reading carries an exact pull time. The three before it were logged to the UTC date and the session that took them, so each pulled_utc is placed inside its own session window from ops/log/ and flagged session-window in pulled_utc_precision. They are good to about half an hour. Charts plotting these on a time axis are plotting that resolution, not a claim of precision.",
+    "known_wobble": "The counted-listing figure moves by roughly plus or minus 1 percent between consecutive pulls hours apart. That is variance on the API side, not supply changing. Do not read a listing-count difference between two readings as growth or decline."
+  },
+  "fields": {
+    "listings_counted": "Listings passing the population filter above",
+    "records_returned": "Raw records the API returned before filtering",
+    "calls_30d": "Sum of l30DaysTotalCalls across counted listings",
+    "volume_30d_usd": "Sum of price x l30DaysTotalCalls across counted listings, rounded to whole dollars",
+    "median_listing_usd_month": "Median estimated 30-day revenue of a counted listing",
+    "mean_listing_usd_month": "Mean estimated 30-day revenue of a counted listing",
+    "listings_over_100_usd_month": "Count earning $100 or more in the window",
+    "listings_over_10_usd_month": "Count earning $10 or more in the window",
+    "listings_over_1_usd_month": "Count earning $1 or more in the window",
+    "share_under_1_usd_month": "Share of counted listings earning under $1 in the window",
+    "top10_share_of_calls": "Share of all paid calls taken by the ten busiest listings",
+    "distinct_seller_hosts": "Distinct hostnames serving the counted listings",
+    "null": "A null means that reading did not record the field, not that the value was zero.",
+    "pulled_utc": "UTC time the reading was pulled.",
+    "pulled_utc_precision": "exact = the pull time was logged to the minute. session-window = only the session that took the reading was logged, so the timestamp is placed inside that session window (ops/log/) and is good to about half an hour."
+  },
+  "readings": [
+    {
+      "date": "2026-07-24",
+      "pulled_utc": "2026-07-24T19:30:00Z",
+      "session": "s007",
+      "listings_counted": 14064,
+      "records_returned": 14249,
+      "calls_30d": 339178,
+      "volume_30d_usd": 9747,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": null,
+      "listings_over_100_usd_month": 12,
+      "listings_over_10_usd_month": 120,
+      "listings_over_1_usd_month": 990,
+      "share_under_1_usd_month": 0.93,
+      "top10_share_of_calls": null,
+      "distinct_seller_hosts": null,
+      "pulled_utc_precision": "session-window"
+    },
+    {
+      "date": "2026-07-24",
+      "pulled_utc": "2026-07-24T23:00:00Z",
+      "session": "s009",
+      "listings_counted": 13960,
+      "records_returned": null,
+      "calls_30d": null,
+      "volume_30d_usd": 9745,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": null,
+      "listings_over_100_usd_month": 12,
+      "listings_over_10_usd_month": null,
+      "listings_over_1_usd_month": null,
+      "share_under_1_usd_month": null,
+      "top10_share_of_calls": null,
+      "distinct_seller_hosts": null,
+      "pulled_utc_precision": "session-window"
+    },
+    {
+      "date": "2026-07-25",
+      "pulled_utc": "2026-07-25T05:30:00Z",
+      "session": "s010",
+      "listings_counted": 14154,
+      "records_returned": null,
+      "calls_30d": 338556,
+      "volume_30d_usd": 9558,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": null,
+      "listings_over_100_usd_month": 12,
+      "listings_over_10_usd_month": null,
+      "listings_over_1_usd_month": 985,
+      "share_under_1_usd_month": 0.93,
+      "top10_share_of_calls": 0.63,
+      "distinct_seller_hosts": null,
+      "pulled_utc_precision": "session-window"
+    },
+    {
+      "date": "2026-07-25",
+      "pulled_utc": "2026-07-25T09:24:00Z",
+      "session": "s012",
+      "listings_counted": 14080,
+      "records_returned": 14251,
+      "calls_30d": 339008,
+      "volume_30d_usd": 9282,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": 0.66,
+      "listings_over_100_usd_month": 11,
+      "listings_over_10_usd_month": 121,
+      "listings_over_1_usd_month": 977,
+      "share_under_1_usd_month": 0.931,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": 1445,
+      "categories": [
+        {
+          "category": "Social and Twitter data",
+          "listings": 524,
+          "calls_30d": 122638,
+          "volume_30d_usd": 1135
+        },
+        {
+          "category": "Web search",
+          "listings": 1081,
+          "calls_30d": 87153,
+          "volume_30d_usd": 2041
+        },
+        {
+          "category": "Everything else",
+          "listings": 5477,
+          "calls_30d": 58911,
+          "volume_30d_usd": 2365
+        },
+        {
+          "category": "Crypto market data",
+          "listings": 3013,
+          "calls_30d": 25982,
+          "volume_30d_usd": 1035
+        },
+        {
+          "category": "Onchain and wallet data",
+          "listings": 926,
+          "calls_30d": 15553,
+          "volume_30d_usd": 545
+        },
+        {
+          "category": "Research and reports",
+          "listings": 1130,
+          "calls_30d": 9018,
+          "volume_30d_usd": 427
+        },
+        {
+          "category": "AI and LLM inference",
+          "listings": 481,
+          "calls_30d": 6290,
+          "volume_30d_usd": 290
+        },
+        {
+          "category": "Email and messaging",
+          "listings": 191,
+          "calls_30d": 5466,
+          "volume_30d_usd": 472
+        },
+        {
+          "category": "Web extraction and scraping",
+          "listings": 363,
+          "calls_30d": 3312,
+          "volume_30d_usd": 618
+        },
+        {
+          "category": "Media generation",
+          "listings": 354,
+          "calls_30d": 2089,
+          "volume_30d_usd": 95
+        },
+        {
+          "category": "Weather",
+          "listings": 232,
+          "calls_30d": 1318,
+          "volume_30d_usd": 84
+        },
+        {
+          "category": "News and feeds",
+          "listings": 308,
+          "calls_30d": 1278,
+          "volume_30d_usd": 176
+        }
+      ],
+      "pulled_utc_precision": "exact"
+    }
+  ],
+  "what_holds_across_every_reading": [
+    "The median listing earns about three cents a month.",
+    "Roughly 93 percent of listings earn under a dollar a month.",
+    "Between 11 and 12 listings clear $100 a month, out of about 14,000.",
+    "The ten busiest listings take between 63 and 64 percent of all paid calls."
+  ],
+  "what_we_do_not_know": [
+    "How Coinbase counts a call, so whether a call equals a settled payment.",
+    "Whether listings absent from the Bazaar carry meaningful volume; this measures the public discovery surface only.",
+    "Whether the 30-day volume decline across these readings is real movement or window effects. Four readings inside 36 hours cannot answer that, and we are not going to claim it does."
+  ]
+}
