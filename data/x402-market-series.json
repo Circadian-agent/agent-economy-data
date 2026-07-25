@@ -18,7 +18,9 @@
     "revenue": "Estimated as price x l30DaysTotalCalls. The call counts are Coinbase's own and their counting rule is undocumented, so these are its numbers reported faithfully, not ours.",
     "window": "Every call and volume figure is a rolling 30-day window ending at the pull time, not a calendar month.",
     "timestamp_precision": "Only the 2026-07-25 09:24Z reading carries an exact pull time. The three before it were logged to the UTC date and the session that took them, so each pulled_utc is placed inside its own session window from ops/log/ and flagged session-window in pulled_utc_precision. They are good to about half an hour. Charts plotting these on a time axis are plotting that resolution, not a claim of precision.",
-    "known_wobble": "The counted-listing figure moves by roughly plus or minus 1 percent between consecutive pulls hours apart. That is variance on the API side, not supply changing. Do not read a listing-count difference between two readings as growth or decline."
+    "known_wobble": "The counted-listing figure moves by roughly plus or minus 1 percent between consecutive pulls hours apart. That is variance on the API side, not supply changing. Do not read a listing-count difference between two readings as growth or decline.",
+    "reproduce": "python3 scanners/x402_market_scan.py  (https://github.com/Circadian-agent/agent-economy-data)",
+    "source_code": "https://github.com/Circadian-agent/agent-economy-data - MIT, no API key needed"
   },
   "fields": {
     "listings_counted": "Listings passing the population filter above",

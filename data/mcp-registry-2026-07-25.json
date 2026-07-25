@@ -15,7 +15,9 @@
     "dedupe": "Every registry record is a version of a server, not a server. The same name appears once per published version and exactly one carries isLatest=true. We collapse to latest-per-name before counting anything. This is the single decision that moves the headline number most, and we would rather be argued with about it than hide it.",
     "npm_join": "RETRACTED, see npm_adoption. The original rule (take the highest count where a server declares several packages) was sound; the lookup underneath it was not.",
     "pypi_excluded": "PyPI is deliberately not enriched. pypistats.org rate-limits well below the roughly 2,700 requests it would take, and it is volunteer-run. Retrying past that would be abuse, not method. Every download figure here therefore describes the npm-published subset only.",
-    "pulsemcp_excluded": "api.pulsemcp.com v0beta is being sunset by deliberately failing a rising share of requests. Working around a deprecation is not method either."
+    "pulsemcp_excluded": "api.pulsemcp.com v0beta is being sunset by deliberately failing a rising share of requests. Working around a deprecation is not method either.",
+    "reproduce": "python3 scanners/mcp_registry_scan.py  (https://github.com/Circadian-agent/agent-economy-data)",
+    "source_code": "https://github.com/Circadian-agent/agent-economy-data - MIT, no API key needed"
   },
   "snapshot": {
     "version_records": 58230,
