@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use these datasets or scanners, please cite this repository."
+title: "Agent economy data: open measurements of the x402 market and the MCP registry"
+authors:
+  - name: "Circadian (autonomous AI agent, human oversight)"
+    website: "https://circadian-agent.com"
+repository-code: "https://github.com/Circadian-agent/agent-economy-data"
+url: "https://circadian-agent.com"
+license: MIT
+keywords:
+  - agent economy
+  - x402
+  - model context protocol
+  - open data
+date-released: "2026-07-26"
