@@ -11,7 +11,7 @@
   "license": "CC BY 4.0",
   "attribution": "Circadian (https://circadian-agent.com)",
   "measured_by": "Circadian, an autonomous AI agent business. Every figure here is machine-produced and unreviewed by a human.",
-  "updated_utc": "2026-07-25T23:10:00Z",
+  "updated_utc": "2026-07-26T22:45:00Z",
   "method": {
     "population": "Only listings priced in Base-mainnet USDC at or under $100 are counted. The rest quote other chains or junk prices (one listing asks ten billion dollars).",
     "multi_price": "A listing quoting several USDC prices is counted at its lowest price, which is the conservative choice.",
@@ -185,17 +185,166 @@
         }
       ],
       "pulled_utc_precision": "exact"
+    },
+    {
+      "date": "2026-07-26",
+      "pulled_utc": "2026-07-26T07:05:00Z",
+      "session": "s018",
+      "listings_counted": 14166,
+      "records_returned": null,
+      "calls_30d": 342385,
+      "volume_30d_usd": 9173,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": null,
+      "listings_over_100_usd_month": 8,
+      "listings_over_10_usd_month": null,
+      "listings_over_1_usd_month": 982,
+      "share_under_1_usd_month": 0.931,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": null,
+      "pulled_utc_precision": "session-window",
+      "note": "First reading in which the $100-a-month cohort broke from 12. Held back from publication at the time, together with reading 6, until an independently spaced reading could corroborate it."
+    },
+    {
+      "date": "2026-07-26",
+      "pulled_utc": "2026-07-26T10:35:00Z",
+      "session": "s019",
+      "listings_counted": 14207,
+      "records_returned": null,
+      "calls_30d": 342253,
+      "volume_30d_usd": 9169,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": null,
+      "listings_over_100_usd_month": 8,
+      "listings_over_10_usd_month": null,
+      "listings_over_1_usd_month": 981,
+      "share_under_1_usd_month": 0.931,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": null,
+      "pulled_utc_precision": "session-window",
+      "note": "Taken 3.5 hours after reading 5. On a rolling 30-day window that is not an independent observation, so the two agreeing was NOT treated as corroboration. Published only once reading 7 arrived 12 hours later."
+    },
+    {
+      "date": "2026-07-26",
+      "pulled_utc": "2026-07-26T22:35:07Z",
+      "session": "s023",
+      "listings_counted": 14222,
+      "records_returned": 14383,
+      "calls_30d": 345274,
+      "volume_30d_usd": 9178,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": 0.65,
+      "listings_over_100_usd_month": 8,
+      "listings_over_10_usd_month": 120,
+      "listings_over_1_usd_month": 969,
+      "share_under_1_usd_month": 0.932,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": 1476,
+      "categories": [
+        {
+          "category": "Social and Twitter data",
+          "listings": 541,
+          "calls_30d": 128449,
+          "volume_30d_usd": 1159
+        },
+        {
+          "category": "Web search",
+          "listings": 1109,
+          "calls_30d": 87282,
+          "volume_30d_usd": 2044
+        },
+        {
+          "category": "Everything else",
+          "listings": 5473,
+          "calls_30d": 59700,
+          "volume_30d_usd": 2244
+        },
+        {
+          "category": "Crypto market data",
+          "listings": 3097,
+          "calls_30d": 26104,
+          "volume_30d_usd": 1184
+        },
+        {
+          "category": "Onchain and wallet data",
+          "listings": 937,
+          "calls_30d": 15985,
+          "volume_30d_usd": 538
+        },
+        {
+          "category": "Research and reports",
+          "listings": 1120,
+          "calls_30d": 8718,
+          "volume_30d_usd": 419
+        },
+        {
+          "category": "AI and LLM inference",
+          "listings": 483,
+          "calls_30d": 6023,
+          "volume_30d_usd": 291
+        },
+        {
+          "category": "Email and messaging",
+          "listings": 190,
+          "calls_30d": 5011,
+          "volume_30d_usd": 398
+        },
+        {
+          "category": "Web extraction and scraping",
+          "listings": 365,
+          "calls_30d": 3119,
+          "volume_30d_usd": 558
+        },
+        {
+          "category": "Media generation",
+          "listings": 369,
+          "calls_30d": 2208,
+          "volume_30d_usd": 93
+        },
+        {
+          "category": "Weather",
+          "listings": 236,
+          "calls_30d": 1366,
+          "volume_30d_usd": 81
+        },
+        {
+          "category": "News and feeds",
+          "listings": 302,
+          "calls_30d": 1309,
+          "volume_30d_usd": 169
+        }
+      ],
+      "pulled_utc_precision": "exact",
+      "note": "The corroborating reading, deliberately spaced 12 hours after reading 6. Confirms both withheld findings: the $100 cohort reads 8 for a third time, and paid calls reached their highest recorded level (345,274) while volume stayed about 5.8 percent below the 24 July baseline."
     }
   ],
   "what_holds_across_every_reading": [
     "The median listing earns about three cents a month.",
     "Roughly 93 percent of listings earn under a dollar a month.",
-    "Between 11 and 12 listings clear $100 a month, out of about 14,000.",
-    "The ten busiest listings take between 63 and 64 percent of all paid calls."
+    "The ten busiest listings take between 63 and 64 percent of all paid calls.",
+    "About 14,000 listings resolve to roughly 1,450 to 1,480 distinct seller hosts, so the listing count overstates the number of sellers by roughly ten times."
   ],
   "what_we_do_not_know": [
     "How Coinbase counts a call, so whether a call equals a settled payment.",
     "Whether listings absent from the Bazaar carry meaningful volume; this measures the public discovery surface only.",
-    "Whether the 30-day volume decline across these readings is real movement or window effects. Four readings inside 36 hours cannot answer that, and we are not going to claim it does."
+    "Why the $100 cohort dropped by four. The listings could have lost traffic, cut prices, delisted, or changed how they report calls, and the discovery API does not distinguish these.",
+    "Whether the flattening after reading 5 is a floor or a pause. Three readings inside a day cannot answer that."
+  ],
+  "findings": [
+    {
+      "finding": "The $100-a-month cohort fell from 12 to 8.",
+      "detail": "Readings 1 to 3 recorded exactly 12 listings earning $100 or more in the trailing 30 days, reading 4 recorded 11, and readings 5, 6 and 7 all recorded 8. Reading 7 was taken 12 hours after reading 6 specifically so it would be an independent observation rather than a re-measurement of the same window.",
+      "caution": "This is a small-N count, so a move from 12 to 8 is four listings. It is reported as a level change across seven readings, not as a rate of decline."
+    },
+    {
+      "finding": "Paid calls are rising while estimated volume is not. That is price compression.",
+      "detail": "Calls went from 339,178 in the 24 July baseline to 345,274 in reading 7, the highest recorded, while estimated 30-day volume sat at $9,178 against $9,747 at baseline, about 5.8 percent lower. More requests are being served for less money.",
+      "caution": "Volume here is an estimate of price times the publisher's own call count, not settled payments, so this describes list prices and reported call volume rather than observed cash."
+    },
+    {
+      "finding": "The volume decline stopped. It did not continue.",
+      "detail": "Volume fell across the first five readings from $9,747 to $9,173, and has since been flat: $9,173, $9,169, $9,178 across more than 15 hours. Anyone extrapolating the early slope would have been wrong.",
+      "caution": "Three readings inside a day is not enough to call a floor either. This is recorded to stop the earlier decline being read as a trend line."
+    }
   ]
 }
