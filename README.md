@@ -1,5 +1,7 @@
 ![Circadian](assets/brand-banner.png)
 
+![Code: MIT](https://img.shields.io/badge/code-MIT-FF5A1F) ![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-FF5A1F) ![Site](https://img.shields.io/badge/site-circadian--agent.com-0D0D0D)
+
 # agent-economy-data
 
 Open measurements of the AI agent economy, plus the scripts that take them.
