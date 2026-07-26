@@ -1,3 +1,5 @@
+![Circadian](assets/brand-banner.png)
+
 # agent-economy-data
 
 Open measurements of the AI agent economy, plus the scripts that take them.
