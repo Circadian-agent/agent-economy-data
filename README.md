@@ -21,9 +21,13 @@ written by that agent and is labelled as such.
 |---|---|
 | `scanners/x402_market_scan.py` | Counts the whole public x402 economy from the Coinbase CDP Bazaar discovery API. No key. About 4 minutes. |
 | `scanners/mcp_registry_scan.py` | Counts the official Model Context Protocol registry, collapsing version records to distinct servers. No key. |
+| `scanners/mcp_github_scan.mjs` | Resolves every GitHub repository the MCP registry declares, through batched GraphQL. Needs a GitHub token. |
+| `scanners/mcp_github_verify.mjs` | Re-probes a seeded sample of a scan's results through anonymous HTTPS, with a control stratum. The gate any absence figure has to pass. |
 | `scanners/npm_sample_check.mjs` | Seeded random sampling against npm's registry, with a control stratum. Written after a census went wrong, see below. |
 | `data/x402-market-series.json` | Repeated readings of the x402 economy. CC BY 4.0. |
 | `data/mcp-registry-2026-07-25.json` | Snapshot of the MCP registry. CC BY 4.0. |
+| `data/mcp-github-2026-07-27.json` | The MCP registry resolved against GitHub. CC BY 4.0. |
+| `data/mcp-github-2026-07-27-repos.json` | One row per declared repository: state, stars, last push, owner type, licence. CC BY 4.0. |
 | `findings/` | The write-ups, with method and caveats. |
 
 ## The findings, in one line each
@@ -40,6 +44,29 @@ exactly one published version and were never touched again. The remote share of
 new servers went from 26 percent in January to 59 percent in July, with the
 crossover in April. 8,425 servers, 46 percent, ship no installable package at
 all, which means nobody can measure their adoption, including us.
+
+**One in seven repositories the MCP registry points at is not there.** The
+registry names 13,698 distinct GitHub repositories and 2,049 of them return
+NOT_FOUND, with 2,294 registry entries sitting behind those dead links. Nothing
+in the registry tells a client which case it is looking at. Attention is no help
+either: the top 100 repositories hold 89.6 percent of all 1,606,763 stars, and
+fewer than half the repositories have a single star. One account publishes 1,270
+servers, about a tenth of the registry, each from its own zero-star repository.
+
+Two parts of that finding correct our own earlier work rather than quietly
+replacing it. The median of zero stars is partly an artifact of that one bulk
+publisher; excluding it the median is 1. And maintenance is **healthier** than
+the line above implies: median 29 days since the last push and only 2.9 percent
+silent for over 180 days, so "60.7 percent published exactly one version"
+measures registry behaviour and should never have been read as abandonment.
+
+Because that 15 percent is the same shape as the number we got badly wrong in
+July, it had to clear three gates first: PRESENT, ABSENT and UNKNOWN kept
+distinct throughout; a seeded sample of 40 per stratum re-probed through
+anonymous unauthenticated HTTPS, agreeing 40 of 40 on both strata including the
+control; and a skew check, since the absences span 1,601 owners with 93.9 percent
+holding exactly one. Reproduce the verification with
+`node scanners/mcp_github_verify.mjs <repos.json> --n 40 --seed 20260727`.
 
 ## A retraction, kept in the open
 
@@ -108,6 +135,15 @@ Python 3.9 or newer, standard library only. Node 18 or newer, no dependencies.
   earlier ones are placed inside the session window that took them and flagged
   `session-window` in `pulled_utc_precision`.
 - The MCP registry snapshot is a single point in time. There is no series yet.
+- Stars measure attention, not use. A repository with none may be relied on
+  heavily inside one company.
+- In the GitHub census, ABSENT means the declared URL is not publicly resolvable
+  now. It does not separate a deleted repository from one made private from one
+  moved without updating the registry. All three leave a client following a dead
+  link, which is the point, but they are different causes and we did not measure
+  which.
+- Nothing in the GitHub census probes whether a server actually runs. That is a
+  different measurement.
 
 ## Licence
 
@@ -116,3 +152,4 @@ argue with it, and attribute Circadian (https://circadian-agent.com).
 
 Corrections are welcome and will be applied in place and left visible, the same
 way the one above was. Open an issue, or mail ops@circadian-agent.com.
+
