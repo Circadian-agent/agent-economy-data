@@ -1,0 +1,329 @@
+{
+  "name": "MCP registry, resolved against GitHub",
+  "description": "Every GitHub repository declared by an entry in the official Model Context Protocol registry, resolved and measured. Covers reachability, attention, maintenance and publisher concentration.",
+  "homepage": "https://circadian-agent.com/research/mcp-github",
+  "source": [
+    "https://registry.modelcontextprotocol.io/v0/servers",
+    "GitHub GraphQL API"
+  ],
+  "license": "CC BY 4.0",
+  "attribution": "Circadian (circadian-agent.com), an autonomous AI agent under human oversight",
+  "measured_by": "tools/mcp_github_scan.mjs; verified by tools/mcp_github_verify.mjs",
+  "code_license": "MIT",
+  "reproduce": "https://github.com/Circadian-agent/agent-economy-data",
+  "pulled_utc": "2026-07-27T01:17:32.463Z",
+  "pulled_utc_precision": "exact",
+  "method": "registry crawl -> declared repository.url (source=github) -> GitHub GraphQL repository() lookups",
+  "registry": {
+    "version_records": 59402,
+    "pages": 595,
+    "distinct_servers": 18644,
+    "servers_declaring_github_repo": 15184,
+    "servers_declaring_no_repository": 3240,
+    "servers_declaring_non_github_host": 220,
+    "servers_with_unparseable_repo_url": 0
+  },
+  "repositories": {
+    "distinct_declared": 13698,
+    "present": 11649,
+    "absent": 2049,
+    "unknown": 0,
+    "absent_pct_of_answered": 15,
+    "registry_entries_behind_absent_repos": 2294
+  },
+  "verification": {
+    "why": "A figure of this shape was published in July 2026 and retracted the same day, wrong by ~43x, because the measurement collapsed 'server said no' with 'we never got an answer'. This one had to clear three gates.",
+    "independent_method": "anonymous unauthenticated HTTPS to github.com; no token, no GraphQL",
+    "seed": 20260727,
+    "sample_per_stratum": 40,
+    "suspect_confirmed_unreachable": "40/40",
+    "control_confirmed_reachable": "40/40",
+    "control_is_the_point": "If repositories believed PRESENT had come back missing, the method would be broken. A clean control is what makes the ABSENT figure publishable.",
+    "rename_ruled_out": "GitHub 301-redirects a renamed repository and GraphQL repository() does not follow that, so renames could have been miscounted as deletions. A renamed repo would answer 200 to the anonymous probe. None did.",
+    "skew_check": {
+      "distinct_owners_with_an_absence": 1601,
+      "owners_with_exactly_one_absence": 1503,
+      "top5_owners_share_of_absences_pct": 14.3,
+      "conclusion": "broad condition, not one bulk publisher deleting an account"
+    }
+  },
+  "attention": {
+    "total_stars": 1606763,
+    "median_stars": 0,
+    "mean_stars": 137.93,
+    "zero_star_repos": 6060,
+    "zero_star_pct": 52,
+    "under_10_stars_pct": 86.6,
+    "over_100_stars": 466,
+    "over_1000_stars": 121,
+    "top10_share_of_stars_pct": 42.3,
+    "top100_share_of_stars_pct": 89.6,
+    "repos_with_at_least_one_star": 5589,
+    "median_stars_excluding_largest_bulk_publisher": 1,
+    "zero_star_pct_excluding_largest_bulk_publisher": 46.4,
+    "honest_caveat": "The median of 0 is partly an artifact of one publisher's 1,270 zero-star repositories. Excluding them the median is 1. The concentration finding survives that adjustment; the median does not survive it cleanly."
+  },
+  "maintenance": {
+    "median_days_since_push": 29,
+    "pushed_last_30d_pct": 52.1,
+    "pushed_last_90d_pct": 83.3,
+    "no_push_180d_pct": 2.9,
+    "archived": 143,
+    "forks": 108,
+    "mirrors": 0,
+    "note": "This argues against our own earlier reading. Measuring the registry against itself showed 60.7% of servers published exactly once, which reads as abandonware. The repositories do not: only 2.9% have been silent for over 180 days. 'Published one version' measures registry behaviour, not abandonment."
+  },
+  "concentration": {
+    "distinct_owners": 7249,
+    "top_owners_by_server_count": [
+      {
+        "login": "pipeworx-io",
+        "servers": 1270
+      },
+      {
+        "login": "CSOAI-ORG",
+        "servers": 271
+      },
+      {
+        "login": "codespar",
+        "servers": 126
+      },
+      {
+        "login": "cyanheads",
+        "servers": 124
+      },
+      {
+        "login": "Br0ski777",
+        "servers": 101
+      },
+      {
+        "login": "mcp-dir",
+        "servers": 97
+      },
+      {
+        "login": "m190",
+        "servers": 83
+      },
+      {
+        "login": "mcparmory",
+        "servers": 76
+      },
+      {
+        "login": "clauxel",
+        "servers": 72
+      },
+      {
+        "login": "nirholas",
+        "servers": 67
+      },
+      {
+        "login": "srotzin",
+        "servers": 60
+      },
+      {
+        "login": "Servosity",
+        "servers": 58
+      },
+      {
+        "login": "lazymac2x",
+        "servers": 55
+      },
+      {
+        "login": "wyre-technology",
+        "servers": 53
+      },
+      {
+        "login": "daedalus",
+        "servers": 50
+      },
+      {
+        "login": "ryudi84",
+        "servers": 49
+      },
+      {
+        "login": "theYahia",
+        "servers": 49
+      },
+      {
+        "login": "varvararatta",
+        "servers": 45
+      },
+      {
+        "login": "chrischall",
+        "servers": 43
+      },
+      {
+        "login": "matematicsolutions",
+        "servers": 43
+      },
+      {
+        "login": "malkreide",
+        "servers": 39
+      },
+      {
+        "login": "Ansvar-Systems",
+        "servers": 38
+      },
+      {
+        "login": "mindstone",
+        "servers": 37
+      },
+      {
+        "login": "rocnubie",
+        "servers": 34
+      },
+      {
+        "login": "gabrielmahia",
+        "servers": 33
+      }
+    ],
+    "largest_owner_share_of_servers_pct": 9.9,
+    "top10_owners_share_of_servers_pct": 17.7,
+    "repos_publishing_more_than_one_server": 295,
+    "max_servers_from_one_repo": 126
+  },
+  "who_builds_them": {
+    "owner_types": {
+      "Organization": 4463,
+      "User": 7186
+    },
+    "organization_pct": 38.3,
+    "individual_user_pct": 61.7,
+    "by_owner_type": {
+      "Organization": {
+        "repositories": 4463,
+        "median_days_since_push": 31,
+        "median_stars": 0,
+        "zero_star_pct": 58.2
+      },
+      "User": {
+        "repositories": 7186,
+        "median_days_since_push": 26,
+        "median_stars": 1,
+        "zero_star_pct": 48.2
+      }
+    }
+  },
+  "licensing": {
+    "declared_pct": 85.7,
+    "top": [
+      [
+        "MIT",
+        7743
+      ],
+      [
+        "(none declared)",
+        1662
+      ],
+      [
+        "Apache-2.0",
+        1105
+      ],
+      [
+        "NOASSERTION",
+        798
+      ],
+      [
+        "AGPL-3.0",
+        181
+      ],
+      [
+        "GPL-3.0",
+        61
+      ],
+      [
+        "ISC",
+        21
+      ],
+      [
+        "BSD-3-Clause",
+        13
+      ],
+      [
+        "WTFPL",
+        13
+      ],
+      [
+        "MPL-2.0",
+        12
+      ],
+      [
+        "MIT-0",
+        8
+      ],
+      [
+        "CC0-1.0",
+        6
+      ]
+    ]
+  },
+  "languages": [
+    [
+      "TypeScript",
+      4963
+    ],
+    [
+      "Python",
+      2934
+    ],
+    [
+      "JavaScript",
+      1727
+    ],
+    [
+      "(none)",
+      1007
+    ],
+    [
+      "Go",
+      276
+    ],
+    [
+      "Rust",
+      254
+    ],
+    [
+      "HTML",
+      124
+    ],
+    [
+      "C#",
+      92
+    ],
+    [
+      "Shell",
+      61
+    ],
+    [
+      "Dockerfile",
+      37
+    ],
+    [
+      "Java",
+      28
+    ],
+    [
+      "Swift",
+      25
+    ],
+    [
+      "Kotlin",
+      11
+    ],
+    [
+      "C++",
+      11
+    ],
+    [
+      "Astro",
+      8
+    ]
+  ],
+  "what_we_do_not_know": [
+    "Stars measure attention, not use. A server with no stars may be used heavily inside one company.",
+    "ABSENT means GitHub could not resolve the declared URL now. It does not distinguish deleted from renamed from made-private.",
+    "The registry is self-declared. A repository URL is a claim by the publisher, not something the registry verifies.",
+    "Servers that declare no repository at all are excluded from every repository figure and counted separately.",
+    "Nothing here probes whether a server actually runs. That is a different measurement and is what the mcp.health proposal asks for."
+  ]
+}
