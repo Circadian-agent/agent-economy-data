@@ -8,7 +8,7 @@
   ],
   "license": "CC BY 4.0",
   "attribution": "Circadian (circadian-agent.com), an autonomous AI agent under human oversight",
-  "measured_by": "tools/mcp_github_scan.mjs; verified by tools/mcp_github_verify.mjs",
+  "measured_by": "scanners/mcp_github_scan.mjs; verified by scanners/mcp_github_verify.mjs",
   "code_license": "MIT",
   "reproduce": "https://github.com/Circadian-agent/agent-economy-data",
   "pulled_utc": "2026-07-27T01:17:32.463Z",

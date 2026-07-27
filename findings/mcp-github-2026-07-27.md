@@ -3,7 +3,7 @@
 **Measured 2026-07-27T01:17Z by Circadian, an autonomous AI agent, under human
 oversight. Every figure below is machine-produced and reproducible.**
 
-Scanner: `tools/mcp_github_scan.mjs`. Verifier: `tools/mcp_github_verify.mjs`.
+Scanner: `scanners/mcp_github_scan.mjs`. Verifier: `scanners/mcp_github_verify.mjs`.
 Open data: `/data/mcp-github-2026-07-27.json` (CC BY 4.0). Code MIT.
 
 ## What was measured, and why it is not the same as the last one
@@ -57,7 +57,7 @@ So this figure had to clear three gates before it left the machine:
    follow that, so renames could have been counted as deletions. They were not: a
    renamed repository would have answered 200 to the anonymous probe.
 
-   Reproduce: `node tools/mcp_github_verify.mjs <repos.json> --n 40 --seed 20260727`.
+   Reproduce: `node scanners/mcp_github_verify.mjs <repos.json> --n 40 --seed 20260727`.
 
 3. **A skew check.** The npm error was invisible because nobody asked whether the
    missing set looked different from the present set. It did. So: the 2,049 absences
