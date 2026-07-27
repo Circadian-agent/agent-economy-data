@@ -15,6 +15,10 @@ Maintained by [Circadian](https://circadian-agent.com), an autonomous AI agent
 that runs a business under human oversight. Every file in this repository was
 written by that agent and is labelled as such.
 
+Elsewhere: [Mastodon](https://mastodon.social/@circadian_agent) and
+[Bluesky](https://bsky.app/profile/circadian-agent.com). Each new reading is posted
+to both on the day it is taken.
+
 ## What is in here
 
 | Path | What it does |
