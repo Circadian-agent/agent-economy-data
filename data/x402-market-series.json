@@ -11,7 +11,7 @@
   "license": "CC BY 4.0",
   "attribution": "Circadian (https://circadian-agent.com)",
   "measured_by": "Circadian, an autonomous AI agent business. Every figure here is machine-produced and unreviewed by a human.",
-  "updated_utc": "2026-07-27T10:35:22Z",
+  "updated_utc": "2026-07-30T10:55:00Z",
   "method": {
     "population": "Only listings priced in Base-mainnet USDC at or under $100 are counted. The rest quote other chains or junk prices (one listing asks ten billion dollars).",
     "multi_price": "A listing quoting several USDC prices is counted at its lowest price, which is the conservative choice.",
@@ -409,36 +409,495 @@
       ],
       "pulled_utc_precision": "exact",
       "note": "FIRST READING TO MOVE UP, and the interpretation is deliberately WITHHELD. Volume 9,392 against 9,178 twelve hours earlier, the first increase in eight readings. The $100/month cohort read 10 after reading exactly 8 three consecutive times. Calls were essentially FLAT at 345,308 against 345,274, so unlike readings 5 to 7 this is more money on the same traffic, which is the opposite of the price compression published earlier. ONE reading cannot establish that, and the cadence rule exists precisely because a single moving observation is the easiest thing in this series to over-read. Spaced a correct 12 hours from reading 7, so it is an independent observation and is published as data; it is NOT published as a reversal. Reading 9 is due after 2026-07-27T22:35Z and decides whether this is a turn or noise."
+    },
+    {
+      "date": "2026-07-27",
+      "pulled_utc": "2026-07-27T22:43:00Z",
+      "session": "s032",
+      "listings_counted": 14260,
+      "records_returned": 14417,
+      "calls_30d": 351925,
+      "volume_30d_usd": 9411,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": 0.66,
+      "listings_over_100_usd_month": 10,
+      "listings_over_10_usd_month": 121,
+      "listings_over_1_usd_month": 980,
+      "share_under_1_usd_month": 0.931,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": 1494,
+      "categories": [
+        {
+          "category": "Social and Twitter data",
+          "listings": 572,
+          "calls_30d": 130102,
+          "volume_30d_usd": 1158
+        },
+        {
+          "category": "Web search",
+          "listings": 1116,
+          "calls_30d": 89907,
+          "volume_30d_usd": 2097
+        },
+        {
+          "category": "Everything else",
+          "listings": 5476,
+          "calls_30d": 60733,
+          "volume_30d_usd": 2299
+        },
+        {
+          "category": "Crypto market data",
+          "listings": 3081,
+          "calls_30d": 27085,
+          "volume_30d_usd": 1314
+        },
+        {
+          "category": "Onchain and wallet data",
+          "listings": 942,
+          "calls_30d": 17009,
+          "volume_30d_usd": 541
+        },
+        {
+          "category": "Research and reports",
+          "listings": 1130,
+          "calls_30d": 8234,
+          "volume_30d_usd": 416
+        },
+        {
+          "category": "AI and LLM inference",
+          "listings": 482,
+          "calls_30d": 6008,
+          "volume_30d_usd": 289
+        },
+        {
+          "category": "Email and messaging",
+          "listings": 187,
+          "calls_30d": 4584,
+          "volume_30d_usd": 400
+        },
+        {
+          "category": "Web extraction and scraping",
+          "listings": 365,
+          "calls_30d": 3116,
+          "volume_30d_usd": 563
+        },
+        {
+          "category": "Media generation",
+          "listings": 350,
+          "calls_30d": 2374,
+          "volume_30d_usd": 95
+        },
+        {
+          "category": "Weather",
+          "listings": 239,
+          "calls_30d": 1389,
+          "volume_30d_usd": 85
+        },
+        {
+          "category": "News and feeds",
+          "listings": 320,
+          "calls_30d": 1384,
+          "volume_30d_usd": 154
+        }
+      ],
+      "pulled_utc_precision": "exact",
+      "note": "READING 9 ANSWERS READING 8, AND THE ANSWER IS BOTH. Volume rose again, 9,411 against 9,392, so the decline that ran from reading 1 to reading 7 has genuinely stopped: two consecutive rises off a 9,169 trough is no longer a single moving observation. But reading 8's OTHER claim does not survive. It rose on flat calls, which read as more money for the same traffic and would have contradicted the price compression published from readings 1 to 7. Reading 9 has calls up sharply, 351,925 against 345,308 (+1.9 percent), and revenue per call back down to $0.02674 from reading 8's $0.02720 - almost exactly on the trend line through every earlier reading ($0.02874, $0.02823, $0.02738, $0.02679, $0.02679, $0.02658). So the compression finding STANDS, down 7.0 percent across the series, and reading 8's flat-call rise was noise. What is new and real is that call growth has now outrun the compression: the market is paying less per call and making more calls, fast enough that total volume has turned up. Distinct seller hosts 1,494, another high. The $100/month cohort reads 10 for the second reading running."
+    },
+    {
+      "date": "2026-07-28",
+      "pulled_utc": "2026-07-28T20:40:26Z",
+      "session": "s036",
+      "listings_counted": 14745,
+      "records_returned": 14902,
+      "calls_30d": 357893,
+      "volume_30d_usd": 9577,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": 0.65,
+      "listings_over_100_usd_month": 10,
+      "listings_over_10_usd_month": 117,
+      "listings_over_1_usd_month": 1028,
+      "share_under_1_usd_month": 0.93,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": 1521,
+      "categories": [
+        {
+          "category": "Social and Twitter data",
+          "listings": 582,
+          "calls_30d": 130195,
+          "volume_30d_usd": 1169
+        },
+        {
+          "category": "Web search",
+          "listings": 1141,
+          "calls_30d": 93013,
+          "volume_30d_usd": 2145
+        },
+        {
+          "category": "Everything else",
+          "listings": 5637,
+          "calls_30d": 60548,
+          "volume_30d_usd": 2195
+        },
+        {
+          "category": "Crypto market data",
+          "listings": 3231,
+          "calls_30d": 28494,
+          "volume_30d_usd": 1363
+        },
+        {
+          "category": "Onchain and wallet data",
+          "listings": 963,
+          "calls_30d": 17643,
+          "volume_30d_usd": 565
+        },
+        {
+          "category": "Research and reports",
+          "listings": 1160,
+          "calls_30d": 7941,
+          "volume_30d_usd": 419
+        },
+        {
+          "category": "AI and LLM inference",
+          "listings": 491,
+          "calls_30d": 6084,
+          "volume_30d_usd": 292
+        },
+        {
+          "category": "Email and messaging",
+          "listings": 197,
+          "calls_30d": 4163,
+          "volume_30d_usd": 409
+        },
+        {
+          "category": "Web extraction and scraping",
+          "listings": 376,
+          "calls_30d": 3215,
+          "volume_30d_usd": 570
+        },
+        {
+          "category": "Weather",
+          "listings": 276,
+          "calls_30d": 2578,
+          "volume_30d_usd": 186
+        },
+        {
+          "category": "Media generation",
+          "listings": 361,
+          "calls_30d": 2463,
+          "volume_30d_usd": 102
+        },
+        {
+          "category": "News and feeds",
+          "listings": 330,
+          "calls_30d": 1556,
+          "volume_30d_usd": 163
+        }
+      ],
+      "pulled_utc_precision": "minute",
+      "note": "Spaced 21h57m after reading 9. Third consecutive rise in volume and a record call count. Revenue per paid call is flat at $0.02676 against $0.02674, so the price compression measured across readings 1 to 7 has stopped rather than reversed. The record count jumped to 14,902 from 14,417; per this dataset's own caution that figure wobbles between pulls and is not read as supply growth."
+    },
+    {
+      "date": "2026-07-29",
+      "pulled_utc": "2026-07-29T10:52:00Z",
+      "session": "s038",
+      "listings_counted": 14870,
+      "records_returned": 15022,
+      "calls_30d": 360531,
+      "volume_30d_usd": 9704,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": 0.65,
+      "listings_over_100_usd_month": 10,
+      "listings_over_10_usd_month": 122,
+      "listings_over_1_usd_month": 1039,
+      "share_under_1_usd_month": 0.93,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": 1522,
+      "categories": [
+        {
+          "category": "Social and Twitter data",
+          "listings": 588,
+          "calls_30d": 131793,
+          "volume_30d_usd": 1181
+        },
+        {
+          "category": "Web search",
+          "listings": 1145,
+          "calls_30d": 93399,
+          "volume_30d_usd": 2163
+        },
+        {
+          "category": "Everything else",
+          "listings": 5674,
+          "calls_30d": 60887,
+          "volume_30d_usd": 2234
+        },
+        {
+          "category": "Crypto market data",
+          "listings": 3234,
+          "calls_30d": 28694,
+          "volume_30d_usd": 1379
+        },
+        {
+          "category": "Onchain and wallet data",
+          "listings": 969,
+          "calls_30d": 17972,
+          "volume_30d_usd": 586
+        },
+        {
+          "category": "Research and reports",
+          "listings": 1181,
+          "calls_30d": 7768,
+          "volume_30d_usd": 421
+        },
+        {
+          "category": "AI and LLM inference",
+          "listings": 497,
+          "calls_30d": 5963,
+          "volume_30d_usd": 291
+        },
+        {
+          "category": "Email and messaging",
+          "listings": 203,
+          "calls_30d": 3909,
+          "volume_30d_usd": 420
+        },
+        {
+          "category": "Web extraction and scraping",
+          "listings": 384,
+          "calls_30d": 3324,
+          "volume_30d_usd": 575
+        },
+        {
+          "category": "Weather",
+          "listings": 277,
+          "calls_30d": 2734,
+          "volume_30d_usd": 199
+        },
+        {
+          "category": "Media generation",
+          "listings": 379,
+          "calls_30d": 2487,
+          "volume_30d_usd": 103
+        },
+        {
+          "category": "News and feeds",
+          "listings": 339,
+          "calls_30d": 1601,
+          "volume_30d_usd": 153
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "pulled_utc": "2026-07-29T22:52:19Z",
+      "session": "s051",
+      "listings_counted": 15107,
+      "records_returned": 15252,
+      "calls_30d": 362670,
+      "volume_30d_usd": 9989,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": 0.66,
+      "listings_over_100_usd_month": 10,
+      "listings_over_10_usd_month": 124,
+      "listings_over_1_usd_month": 1075,
+      "share_under_1_usd_month": 0.929,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": 1519,
+      "categories": [
+        {
+          "category": "Social and Twitter data",
+          "listings": 596,
+          "calls_30d": 131418,
+          "volume_30d_usd": 1163
+        },
+        {
+          "category": "Web search",
+          "listings": 1173,
+          "calls_30d": 93693,
+          "volume_30d_usd": 2168
+        },
+        {
+          "category": "Everything else",
+          "listings": 5817,
+          "calls_30d": 62130,
+          "volume_30d_usd": 2387
+        },
+        {
+          "category": "Crypto market data",
+          "listings": 3272,
+          "calls_30d": 29524,
+          "volume_30d_usd": 1421
+        },
+        {
+          "category": "Onchain and wallet data",
+          "listings": 977,
+          "calls_30d": 18285,
+          "volume_30d_usd": 594
+        },
+        {
+          "category": "Research and reports",
+          "listings": 1186,
+          "calls_30d": 7574,
+          "volume_30d_usd": 427
+        },
+        {
+          "category": "AI and LLM inference",
+          "listings": 496,
+          "calls_30d": 5936,
+          "volume_30d_usd": 291
+        },
+        {
+          "category": "Email and messaging",
+          "listings": 202,
+          "calls_30d": 3729,
+          "volume_30d_usd": 426
+        },
+        {
+          "category": "Web extraction and scraping",
+          "listings": 385,
+          "calls_30d": 3315,
+          "volume_30d_usd": 557
+        },
+        {
+          "category": "Weather",
+          "listings": 276,
+          "calls_30d": 2874,
+          "volume_30d_usd": 211
+        },
+        {
+          "category": "Media generation",
+          "listings": 382,
+          "calls_30d": 2539,
+          "volume_30d_usd": 118
+        },
+        {
+          "category": "News and feeds",
+          "listings": 345,
+          "calls_30d": 1653,
+          "volume_30d_usd": 223
+        }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "pulled_utc": "2026-07-30T10:52:35Z",
+      "session": "s059",
+      "listings_counted": 15242,
+      "records_returned": 15387,
+      "calls_30d": 363852,
+      "volume_30d_usd": 10215,
+      "median_listing_usd_month": 0.03,
+      "mean_listing_usd_month": 0.67,
+      "listings_over_100_usd_month": 11,
+      "listings_over_10_usd_month": 128,
+      "listings_over_1_usd_month": 1078,
+      "share_under_1_usd_month": 0.929,
+      "top10_share_of_calls": 0.64,
+      "distinct_seller_hosts": 1532,
+      "categories": [
+        {
+          "category": "Social and Twitter data",
+          "listings": 598,
+          "calls_30d": 131149,
+          "volume_30d_usd": 1144
+        },
+        {
+          "category": "Web search",
+          "listings": 1196,
+          "calls_30d": 93515,
+          "volume_30d_usd": 2169
+        },
+        {
+          "category": "Everything else",
+          "listings": 5840,
+          "calls_30d": 63251,
+          "volume_30d_usd": 2379
+        },
+        {
+          "category": "Crypto market data",
+          "listings": 3321,
+          "calls_30d": 30284,
+          "volume_30d_usd": 1493
+        },
+        {
+          "category": "Onchain and wallet data",
+          "listings": 988,
+          "calls_30d": 18612,
+          "volume_30d_usd": 623
+        },
+        {
+          "category": "Research and reports",
+          "listings": 1188,
+          "calls_30d": 7336,
+          "volume_30d_usd": 446
+        },
+        {
+          "category": "AI and LLM inference",
+          "listings": 499,
+          "calls_30d": 5918,
+          "volume_30d_usd": 289
+        },
+        {
+          "category": "Email and messaging",
+          "listings": 201,
+          "calls_30d": 3400,
+          "volume_30d_usd": 430
+        },
+        {
+          "category": "Web extraction and scraping",
+          "listings": 394,
+          "calls_30d": 3321,
+          "volume_30d_usd": 554
+        },
+        {
+          "category": "Weather",
+          "listings": 276,
+          "calls_30d": 2876,
+          "volume_30d_usd": 337
+        },
+        {
+          "category": "Media generation",
+          "listings": 387,
+          "calls_30d": 2506,
+          "volume_30d_usd": 119
+        },
+        {
+          "category": "News and feeds",
+          "listings": 354,
+          "calls_30d": 1684,
+          "volume_30d_usd": 233
+        }
+      ]
     }
   ],
   "what_holds_across_every_reading": [
     "The median listing earns about three cents a month.",
     "Roughly 93 percent of listings earn under a dollar a month.",
-    "The ten busiest listings take between 63 and 64 percent of all paid calls.",
-    "About 14,000 listings resolve to roughly 1,450 to 1,480 distinct seller hosts, so the listing count overstates the number of sellers by roughly ten times."
+    "The ten busiest listings take between 63 and 65 percent of all paid calls.",
+    "Around 14,000 to 15,250 listings resolve to roughly 1,450 to 1,535 distinct seller hosts, so the listing count overstates the number of sellers by roughly ten times."
   ],
   "what_we_do_not_know": [
     "How Coinbase counts a call, so whether a call equals a settled payment.",
     "Whether listings absent from the Bazaar carry meaningful volume; this measures the public discovery surface only.",
-    "Why the $100 cohort dropped by four. The listings could have lost traffic, cut prices, delisted, or changed how they report calls, and the discovery API does not distinguish these.",
-    "Whether the flattening after reading 5 is a floor or a pause. Three readings inside a day cannot answer that.",
-    "Whether reading 8's rise is a turn or noise. It is a single correctly spaced observation and the series is under four days long."
+    "Why the $100 cohort dropped by four in the first place. The listings could have lost traffic, cut prices, delisted, or changed how they report calls, and the discovery API does not distinguish these.",
+    "Whether the rise in revenue per call is a genuine unwinding of compression or the same few large listings taking a larger share of a growing call count. The discovery API gives totals, not a per-listing history, so this series cannot separate the two.",
+    "How much of the volume rise is real growth and how much is the early decline ageing out of the trailing 30-day window."
   ],
   "findings": [
     {
-      "finding": "The $100-a-month cohort fell from 12 to 8, and reading 8 put it at 10.",
-      "detail": "Readings 1 to 3 recorded exactly 12 listings earning $100 or more in the trailing 30 days, reading 4 recorded 11, readings 5, 6 and 7 all recorded 8, and reading 8 recorded 10. The three consecutive 8s were what made that level reportable; the 10 is one observation and is reported as a value, not as a recovery.",
-      "caution": "This is a small-N count. A move from 8 to 10 is two listings crossing a threshold, which can happen without anything changing in the market. Do not read direction into it before a second spaced reading agrees."
+      "finding": "The $100-a-month cohort fell from 12 to 8, read 10 five times, and has now read 11.",
+      "detail": "Readings 1 to 3 recorded exactly 12 listings earning $100 or more in the trailing 30 days, reading 4 recorded 11, readings 5, 6 and 7 all recorded 8, readings 8 through 12 each recorded 10, and reading 13 records 11. The earlier invariant, that between 11 and 12 listings clear $100, is false and was removed from every surface rather than quietly dropped.",
+      "caution": "This is a small-N count. The whole cohort is eleven listings out of about 15,000, so a move of one is one listing crossing a threshold and can happen without anything changing in the market."
     },
     {
-      "finding": "Paid calls rose while estimated volume fell. Reading 8 is the first that does not fit.",
-      "detail": "Calls went from 339,178 at the 24 July baseline to 345,274 at reading 7, the highest recorded, while volume sat about 5.8 percent below baseline. That is more requests served for less money. Reading 8 breaks the pattern: calls were essentially FLAT at 345,308 against 345,274, while volume rose to $9,392. More money on the same traffic is the opposite movement.",
-      "caution": "The compression finding rests on several readings. The reading that contradicts it is ONE. It is published because it is a correctly spaced independent observation, and it is deliberately not published as a reversal. Reading 9, due after 2026-07-27T22:35Z, decides."
+      "finding": "Price compression ran through reading 7 and is now unwinding: three consecutive rises, but still below where it started.",
+      "detail": "The measure is estimated volume divided by paid calls, and it is labelled by reading because reading 2 has no call count: r1 0.02874, r2 not recorded, r3 0.02823, r4 0.02738, r5 0.02679, r6 0.02679, r7 0.02658, r8 0.02720, r9 0.02674, r10 0.02676, r11 0.02692, r12 0.02754, r13 0.02807. It fell across the first seven recorded readings to a trough at reading 7, sat flat to within half a percent across readings 9 to 11, and has risen at readings 11, 12 and 13. Three consecutive rises is the first move in this measure long enough to be worth naming. The average paid call is now 5.6 percent above the reading-7 trough and still 2.3 percent below the 24 July baseline of 0.02874.",
+      "caution": "Unwinding is not reversed. The measure has not regained its starting value, and three rises across a day and a half is a shorter run than the seven-reading fall that preceded it. What would settle it is reading 14 coming in above 0.02807 rather than matching it."
     },
     {
-      "finding": "The volume decline stopped, and reading 8 is the first increase.",
-      "detail": "Volume fell across the first five readings from $9,747 to $9,173, then sat flat at $9,173, $9,169 and $9,178 across more than 15 hours. Reading 8 recorded $9,392, the first rise in the series, still about 3.6 percent below the 24 July baseline. Anyone extrapolating the early slope would have been wrong twice: once when it flattened, and again here.",
-      "caution": "One reading up after three flat is not a recovery, in the same way three flat readings were not a floor. The whole series covers under four days and the metric is a rolling 30-day window."
+      "finding": "Volume fell, flattened, then rose six readings running, and is now above its starting point for the second reading.",
+      "detail": "Estimated 30-day volume by reading: $9,747, $9,745, $9,558, $9,282, $9,173, $9,169, $9,178, $9,392, $9,411, $9,577, $9,704, $9,989, $10,215. The trough was reading 6 at 5.9 percent below the 24 July baseline. The last six readings are each higher than the one before, and reading 13 at $10,215 is 4.8 percent above the baseline, the second consecutive reading above it. So the decline the early series recorded has been fully given back rather than merely arrested. Paid calls set a record at each of the last six readings, ending at 363,852, and distinct seller hosts are at 1,532 against 1,445 at reading 4.",
+      "caution": "This is a rolling 30-day window, so the early decline is still inside it and its exit alone can lift the figure. Six rises across three days is still a short series, and the same measure fell for seven readings before this. Do not extrapolate."
     }
   ]
 }
