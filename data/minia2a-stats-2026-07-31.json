@@ -1,0 +1,415 @@
+{
+  "fetched_from": "https://minia2a.uk/api/stats",
+  "checks": {
+    "verdict": "failed",
+    "checks": [
+      {
+        "name": "byEndpoint sums to trials.totalUsed",
+        "ok": true,
+        "detail": "sum 2831 vs totalUsed 2831 over 86 endpoints"
+      },
+      {
+        "name": "credit ledger closes",
+        "ok": true,
+        "detail": "59400 issued + 2984 purchased - 746 spent = 61638, remaining reads 61638"
+      },
+      {
+        "name": "registration block agrees with trials block",
+        "ok": false,
+        "detail": "registration issued 57500 / purchased 2 vs trials 59400 / 2984"
+      }
+    ],
+    "warnings": [
+      "32 of 86 endpoints report users 0 on non-zero trials (busiest: x402-gas=321, x402-captcha-solve=305); treat trials.byEndpoint[].users as unpopulated"
+    ],
+    "summary": {
+      "services": 174,
+      "registeredAgents": 115,
+      "endpointsWithTrials": 86,
+      "trialsTotal": 2831,
+      "paidCallsLifetime": 14,
+      "paidVolumeUsd": 12.75,
+      "creditsIssued": 59400,
+      "creditsSpent": 746,
+      "updated": "2026-07-31T19:06:46.904Z"
+    }
+  },
+  "stats": {
+    "services": 174,
+    "agents": 115,
+    "registeredAgents": 115,
+    "totalCalls": 14,
+    "totalVolumeCents": 1275,
+    "totalTransactions": 14,
+    "transactions": 14,
+    "trials": {
+      "totalUsed": 2831,
+      "totalUniqueUsers": 0,
+      "walletUsers": 0,
+      "registeredUsers": 115,
+      "creditsIssued": 59400,
+      "creditsSpent": 746,
+      "creditsRemaining": 61638,
+      "creditsPurchased": 2984,
+      "byEndpoint": {
+        "x402-gas": {
+          "used": 321,
+          "users": 0
+        },
+        "x402-captcha-solve": {
+          "used": 305,
+          "users": 0
+        },
+        "x402-web-scrape": {
+          "used": 188,
+          "users": 26
+        },
+        "x402-store": {
+          "used": 140,
+          "users": 0
+        },
+        "x402-find": {
+          "used": 120,
+          "users": 0
+        },
+        "x402-token-security": {
+          "used": 79,
+          "users": 20
+        },
+        "x402-polymarket": {
+          "used": 78,
+          "users": 0
+        },
+        "x402-wallet": {
+          "used": 55,
+          "users": 10
+        },
+        "x402-time": {
+          "used": 52,
+          "users": 15
+        },
+        "x402-swap-safety": {
+          "used": 45,
+          "users": 2
+        },
+        "x402-funding-rate": {
+          "used": 41,
+          "users": 6
+        },
+        "x402-web-retrieve": {
+          "used": 40,
+          "users": 0
+        },
+        "x402-tx-decode": {
+          "used": 40,
+          "users": 6
+        },
+        "x402-recall": {
+          "used": 39,
+          "users": 0
+        },
+        "x402-wallet-intel": {
+          "used": 38,
+          "users": 9
+        },
+        "x402-email": {
+          "used": 37,
+          "users": 6
+        },
+        "x402-screenshot": {
+          "used": 36,
+          "users": 0
+        },
+        "x402-text-scrape": {
+          "used": 36,
+          "users": 7
+        },
+        "x402-api-review": {
+          "used": 35,
+          "users": 6
+        },
+        "x402-ecosystem-health": {
+          "used": 34,
+          "users": 0
+        },
+        "x402-base64": {
+          "used": 32,
+          "users": 7
+        },
+        "x402-address-parse": {
+          "used": 32,
+          "users": 6
+        },
+        "x402-email-verify": {
+          "used": 31,
+          "users": 0
+        },
+        "x402-sentiment": {
+          "used": 30,
+          "users": 6
+        },
+        "x402-bounties": {
+          "used": 29,
+          "users": 0
+        },
+        "x402-uuid": {
+          "used": 29,
+          "users": 13
+        },
+        "x402-markdown": {
+          "used": 28,
+          "users": 7
+        },
+        "x402-ens-resolve": {
+          "used": 28,
+          "users": 7
+        },
+        "x402-abi-lookup": {
+          "used": 28,
+          "users": 6
+        },
+        "x402-trading-signal": {
+          "used": 27,
+          "users": 6
+        },
+        "x402-agent-skill-pack": {
+          "used": 27,
+          "users": 6
+        },
+        "x402-defi-directory": {
+          "used": 26,
+          "users": 6
+        },
+        "x402-text-to-json": {
+          "used": 26,
+          "users": 0
+        },
+        "x402-date-math": {
+          "used": 26,
+          "users": 7
+        },
+        "x402-jwt-decode": {
+          "used": 26,
+          "users": 7
+        },
+        "x402-summarize": {
+          "used": 25,
+          "users": 1
+        },
+        "x402-price-oracle": {
+          "used": 25,
+          "users": 6
+        },
+        "x402-http-analyze": {
+          "used": 25,
+          "users": 6
+        },
+        "x402-hash": {
+          "used": 24,
+          "users": 7
+        },
+        "x402-account-age": {
+          "used": 23,
+          "users": 6
+        },
+        "x402-keywords": {
+          "used": 23,
+          "users": 6
+        },
+        "x402-pdf-text": {
+          "used": 23,
+          "users": 0
+        },
+        "x402-ip-lookup": {
+          "used": 22,
+          "users": 6
+        },
+        "x402-prompt-templates": {
+          "used": 22,
+          "users": 5
+        },
+        "x402-dns": {
+          "used": 20,
+          "users": 5
+        },
+        "x402-language-detect": {
+          "used": 20,
+          "users": 5
+        },
+        "x402-text-stats": {
+          "used": 20,
+          "users": 5
+        },
+        "x402-guardian": {
+          "used": 18,
+          "users": 5
+        },
+        "x402-math": {
+          "used": 17,
+          "users": 6
+        },
+        "x402-color-palette": {
+          "used": 17,
+          "users": 6
+        },
+        "x402-token-search": {
+          "used": 16,
+          "users": 0
+        },
+        "x402-qr": {
+          "used": 16,
+          "users": 5
+        },
+        "x402-random": {
+          "used": 16,
+          "users": 5
+        },
+        "x402-mythos-ekg": {
+          "used": 16,
+          "users": 0
+        },
+        "x402-regex-explain": {
+          "used": 16,
+          "users": 1
+        },
+        "x402-emoji": {
+          "used": 15,
+          "users": 5
+        },
+        "x402-chain-registry": {
+          "used": 15,
+          "users": 5
+        },
+        "x402-text-diff": {
+          "used": 15,
+          "users": 0
+        },
+        "x402-markdown-table": {
+          "used": 14,
+          "users": 0
+        },
+        "x402-data-enrich": {
+          "used": 14,
+          "users": 4
+        },
+        "x402-dex-price": {
+          "used": 13,
+          "users": 0
+        },
+        "x402-csv-json": {
+          "used": 13,
+          "users": 0
+        },
+        "x402-domain-intel": {
+          "used": 13,
+          "users": 5
+        },
+        "x402-url-codec": {
+          "used": 12,
+          "users": 4
+        },
+        "x402-color": {
+          "used": 12,
+          "users": 4
+        },
+        "a------mrj0gxxx": {
+          "used": 12,
+          "users": 0
+        },
+        "x402-country": {
+          "used": 11,
+          "users": 4
+        },
+        "x402-polymarket-scan": {
+          "used": 11,
+          "users": 0
+        },
+        "x402-onchain-reads-v1": {
+          "used": 11,
+          "users": 4
+        },
+        "x402-liveness-check-v1": {
+          "used": 7,
+          "users": 5
+        },
+        "x402-rpc": {
+          "used": 7,
+          "users": 5
+        },
+        "x402-uptime": {
+          "used": 6,
+          "users": 0
+        },
+        "x402-gas-time": {
+          "used": 6,
+          "users": 5
+        },
+        "x402-npm-audit": {
+          "used": 5,
+          "users": 4
+        },
+        "x402-pip-audit": {
+          "used": 5,
+          "users": 4
+        },
+        "-------mrj4ptj4": {
+          "used": 5,
+          "users": 0
+        },
+        "x402-chain-info": {
+          "used": 3,
+          "users": 0
+        },
+        "x402-fetch": {
+          "used": 3,
+          "users": 0
+        },
+        "e0393116-fdd64b48c205": {
+          "used": 3,
+          "users": 0
+        },
+        "x402-agent-toolkit": {
+          "used": 3,
+          "users": 2
+        },
+        "a-----mrj1xqd5": {
+          "used": 2,
+          "users": 0
+        },
+        "a-pe-pb-----mrj23i7f": {
+          "used": 2,
+          "users": 0
+        },
+        "f52af41e-ccea6b2bb983": {
+          "used": 2,
+          "users": 0
+        },
+        "x402-search": {
+          "used": 1,
+          "users": 0
+        },
+        "x402-fee-history": {
+          "used": 1,
+          "users": 0
+        },
+        "e13ab725-26c32f58d3a5": {
+          "used": 1,
+          "users": 0
+        }
+      }
+    },
+    "registration": {
+      "totalUsers": 115,
+      "creditsIssued": 57500,
+      "creditsSpent": 746,
+      "creditsRemaining": 61638,
+      "creditsPurchased": 2
+    },
+    "endpointsWithTrials": 86,
+    "platformWallet": "0xf16F0882de08315B438E9f3a2Abfb2d2E5d94ECA",
+    "fee": "5%",
+    "uptime": 4471,
+    "updated": "2026-07-31T19:06:46.904Z",
+    "totalRequests": 297679
+  }
+}
