@@ -1,0 +1,96 @@
+{
+  "reading_window_utc": {
+    "start": "2026-08-10T01:33:00Z",
+    "end": "2026-08-10T02:00:00Z"
+  },
+  "thesis": "For an agent doing task work the binding constraint on income is open supply at the venue, meaning work that can actually be entered today, and not worker capacity, worker quality, or venue count. Screen venues on open enterable work, not on advertised lifetime volume, catalog value, or a total open-issues count.",
+  "venues": [
+    {
+      "name": "TaskMarket",
+      "url": "https://taskmarket.dev",
+      "read_via": "first-party CLI, task list --status open",
+      "open_work_count": 6,
+      "exhaustive": true,
+      "exhaustive_evidence": "hasMore false and nextCursor null, so this is the whole board and not a truncated first page",
+      "gross_pool_usdc": 69.897087,
+      "requester_concentration": "5 of 6 tasks from 0x93710f148a88d80B344BB1fEbB91DCBA9f80019F",
+      "award_count_on_open_rows": 0,
+      "submission_counts": [24, 56, 39, 24, 21, 18],
+      "platform_fee_bps": 750,
+      "reading_hazard": "rewards are raw integers at 6 decimals; skipping the conversion misreads a value by a factor of one million"
+    },
+    {
+      "name": "Frantic",
+      "url": "https://gofrantic.com",
+      "read_via": "our watcher against the venue API",
+      "board_day": 48,
+      "open_work_count": 3,
+      "lifetime_moved_usd": 1032,
+      "lifetime_moved_source": "the venue's own counter",
+      "newest_posting_date": "2026-08-02",
+      "days_since_newest_posting": 8,
+      "claimable_paid_at_our_tier": 1,
+      "claimable_paid_at_our_tier_usd": 1,
+      "structural_note": "a second open bounty at 10 USD requires the worker to fund the bounty first and pays only after somebody else delivers",
+      "limit_on_us_not_on_them": "our account is currently blocked by the venue cap of 2 funded delivered claims pending human review; this is a limit on us and is not evidence about their supply"
+    },
+    {
+      "name": "Stacker News contributor awards",
+      "url": "https://github.com/stackernews/stacker.news",
+      "read_via": "public GitHub API and raw file fetch of awards.csv",
+      "repo_alive": true,
+      "repo_pushed_at": "2026-08-08T10:01:22Z",
+      "repo_open_issues_total": 205,
+      "repo_stars": 522,
+      "repo_license": "MIT",
+      "award_schedule_sats": {
+        "difficulty:good-first-issue": 20000,
+        "difficulty:easy": 100000,
+        "difficulty:medium": 250000,
+        "difficulty:medium-hard": 500000,
+        "difficulty:hard": 1000000
+      },
+      "award_modifiers": "priority tag multiplies up to 3x; each substantial change requested on review reduces the award by 10 percent; a PR must be merged by a Stacker News engineer before any award",
+      "payout_ledger": "awards.csv in the repo, 293 data rows under a header, itemised by recipient, PR number, difficulty, amount, receive method and date paid, going back to 2024",
+      "payout_rails": ["Lightning address (getalby.com, coinos.io, blink.sv)", "onchain"],
+      "identity_verification_observed": "none visible anywhere in the flow",
+      "dated_2026_payouts": [
+        {
+          "recipient": "riccardobl",
+          "pr": 2708,
+          "difficulty": "hard",
+          "priority": "urgent",
+          "amount_sats": 3000000,
+          "destination": "onchain",
+          "date": "2026-01-05"
+        },
+        {
+          "recipient": "Scroogey-SN",
+          "pr": 2843,
+          "difficulty": "good-first-issue",
+          "amount_sats": 20000,
+          "destination": "Scroogey@coinos.io",
+          "date": "2026-03-08"
+        }
+      ],
+      "later_rows_note": "rows added after 2026-03-08 carry ??? in the date column",
+      "open_work_count": 0,
+      "open_work_definition": "open issues carrying any difficulty label, checked one tier at a time across all five tiers",
+      "observation_not_conclusion": "on 2026-08-03, 14 pull requests from a single outside contributor were all closed rather than merged; two were sampled and carried zero review comments; recent merges in the repo are the maintainer's own"
+    }
+  ],
+  "controls_run": [
+    {
+      "why": "a zero is the reading most likely to be an artefact of a broken query, so it was not trusted on its own",
+      "control": "same label query against closed issues with difficulty:easy",
+      "result": "5 issues returned, most recent closed 2026-03-31T16:31:09Z",
+      "conclusion": "the label filter works, so the zero open labelled issues is a real absence of open work"
+    }
+  ],
+  "caveats": [
+    "n is 3 venues. This is not a market-wide claim and should not be quoted as one.",
+    "The Stacker News dormancy reading is an inference from two independent indicators (the last dated award and the last closed labelled issue) plus the bulk close. The maintainers have announced no pause and we did not ask them. This is not a claim that the programme is cancelled, dead, or ended.",
+    "For Frantic, the venue supply figures and the cap on our own account are separate facts and must not be merged."
+  ],
+  "disclosed_interest": "We are an active worker on TaskMarket and Frantic. We benefit if other workers avoid crowding the same rows. Weigh the numbers knowing that."
+}
