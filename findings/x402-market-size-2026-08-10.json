@@ -1,0 +1,276 @@
+{
+  "reading_timestamp_utc": "2026-08-10T03:00:00Z",
+  "thesis": "The x402 protocol, measured at the only public source of per-listing demand, moves about 9401 USDC of estimated volume over 30 days, concentrated in a small number of hosts. A 40-listing price-drift probe found declared prices matched charged prices in 37 of 38 classifiable cases, a base rate of about 2.6 percent drift.",
+  "method": {
+    "source_api": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "asset_label": "Base-mainnet USDC",
+    "price_cap_usd": 100,
+    "price_rule": "lowest USDC price across a listing's accepts array",
+    "revenue_formula": "declared_price_usdc * l30DaysTotalCalls",
+    "revenue_caveat": "l30DaysTotalCalls is Coinbase's own reported figure; how it counts a call is undocumented and this is not an independently verified settlement count"
+  },
+  "market_size": {
+    "raw_records_returned": 14403,
+    "raw_records_recheck_minutes_later": 14404,
+    "counted_pool_base_usdc_leq_100": 14244,
+    "distinct_hosts": 1463,
+    "calls_30d_total": 348008,
+    "estimated_gross_30d_usdc": 9401.19,
+    "median_host_gross_30d_usdc": 0.12,
+    "hosts_clearing_50_usdc_30d": 30,
+    "hosts_clearing_10_usdc_30d": 81,
+    "hosts_with_zero_calls_30d": 17
+  },
+  "concentration_by_gross": [
+    {
+      "top_n_hosts": 1,
+      "share_pct": 8.66
+    },
+    {
+      "top_n_hosts": 5,
+      "share_pct": 33.46
+    },
+    {
+      "top_n_hosts": 10,
+      "share_pct": 51.97
+    },
+    {
+      "top_n_hosts": 20,
+      "share_pct": 67.64
+    },
+    {
+      "top_n_hosts": 50,
+      "share_pct": 83.54
+    },
+    {
+      "top_n_hosts": 140,
+      "share_pct": 93.24
+    }
+  ],
+  "top_25_hosts_by_est_gross": [
+    {
+      "host": "stableenrich.dev",
+      "listings": 16,
+      "calls_30d": 18684,
+      "payers_30d_summed": 818,
+      "est_gross_30d_usdc": 813.74
+    },
+    {
+      "host": "aeml-x402.zeabur.app",
+      "listings": 64,
+      "calls_30d": 2717,
+      "payers_30d_summed": 139,
+      "est_gross_30d_usdc": 653.62
+    },
+    {
+      "host": "x402.twit.sh",
+      "listings": 13,
+      "calls_30d": 96212,
+      "payers_30d_summed": 185,
+      "est_gross_30d_usdc": 581.02
+    },
+    {
+      "host": "www.buywith402.com",
+      "listings": 1,
+      "calls_30d": 28,
+      "payers_30d_summed": 2,
+      "est_gross_30d_usdc": 556.08
+    },
+    {
+      "host": "api.arkm.com",
+      "listings": 84,
+      "calls_30d": 404,
+      "payers_30d_summed": 161,
+      "est_gross_30d_usdc": 541.4
+    },
+    {
+      "host": "x402.tavily.com",
+      "listings": 1,
+      "calls_30d": 46761,
+      "payers_30d_summed": 421,
+      "est_gross_30d_usdc": 467.61
+    },
+    {
+      "host": "api.govparse.io",
+      "listings": 63,
+      "calls_30d": 67,
+      "payers_30d_summed": 65,
+      "est_gross_30d_usdc": 365.48
+    },
+    {
+      "host": "agents.chain.link",
+      "listings": 3,
+      "calls_30d": 46664,
+      "payers_30d_summed": 3,
+      "est_gross_30d_usdc": 352.22
+    },
+    {
+      "host": "laso.finance",
+      "listings": 4,
+      "calls_30d": 66,
+      "payers_30d_summed": 35,
+      "est_gross_30d_usdc": 310.42
+    },
+    {
+      "host": "api.apify.com",
+      "listings": 4,
+      "calls_30d": 244,
+      "payers_30d_summed": 13,
+      "est_gross_30d_usdc": 244.0
+    },
+    {
+      "host": "www.robbiegeorgephotography.com",
+      "listings": 45,
+      "calls_30d": 46,
+      "payers_30d_summed": 45,
+      "est_gross_30d_usdc": 230.0
+    },
+    {
+      "host": "oracles-production.up.railway.app",
+      "listings": 369,
+      "calls_30d": 1496,
+      "payers_30d_summed": 376,
+      "est_gross_30d_usdc": 169.78
+    },
+    {
+      "host": "api.tantra-authority.com",
+      "listings": 19,
+      "calls_30d": 19,
+      "payers_30d_summed": 19,
+      "est_gross_30d_usdc": 163.82
+    },
+    {
+      "host": "palmyr.ai",
+      "listings": 33,
+      "calls_30d": 136,
+      "payers_30d_summed": 43,
+      "est_gross_30d_usdc": 153.67
+    },
+    {
+      "host": "cheaptokens.ai",
+      "listings": 1,
+      "calls_30d": 152,
+      "payers_30d_summed": 19,
+      "est_gross_30d_usdc": 152.0
+    },
+    {
+      "host": "agi.apify.com",
+      "listings": 1,
+      "calls_30d": 146,
+      "payers_30d_summed": 29,
+      "est_gross_30d_usdc": 146.0
+    },
+    {
+      "host": "stabletravel.dev",
+      "listings": 57,
+      "calls_30d": 6081,
+      "payers_30d_summed": 118,
+      "est_gross_30d_usdc": 130.24
+    },
+    {
+      "host": "scvd.store",
+      "listings": 16,
+      "calls_30d": 38,
+      "payers_30d_summed": 32,
+      "est_gross_30d_usdc": 113.59
+    },
+    {
+      "host": "api.strale.io",
+      "listings": 93,
+      "calls_30d": 1579,
+      "payers_30d_summed": 147,
+      "est_gross_30d_usdc": 108.36
+    },
+    {
+      "host": "mudko.com",
+      "listings": 5,
+      "calls_30d": 8,
+      "payers_30d_summed": 5,
+      "est_gross_30d_usdc": 105.7
+    },
+    {
+      "host": "api.x402node.dev",
+      "listings": 308,
+      "calls_30d": 3587,
+      "payers_30d_summed": 1060,
+      "est_gross_30d_usdc": 92.72
+    },
+    {
+      "host": "agent402.tools",
+      "listings": 480,
+      "calls_30d": 3566,
+      "payers_30d_summed": 648,
+      "est_gross_30d_usdc": 87.79
+    },
+    {
+      "host": "www.stratalize.com",
+      "listings": 184,
+      "calls_30d": 336,
+      "payers_30d_summed": 305,
+      "est_gross_30d_usdc": 80.8
+    },
+    {
+      "host": "402.com.tr",
+      "listings": 121,
+      "calls_30d": 435,
+      "payers_30d_summed": 140,
+      "est_gross_30d_usdc": 71.66
+    },
+    {
+      "host": "api.linkedpanda.com",
+      "listings": 10,
+      "calls_30d": 718,
+      "payers_30d_summed": 47,
+      "est_gross_30d_usdc": 70.18
+    }
+  ],
+  "price_drift_probe": {
+    "method": "one unpaid request per sampled listing's resource URL, 402 challenge read from body or header and compared to the pool's declared price",
+    "sample_size": 40,
+    "sample_composition": "20 highest by calls_30d, 20 random spread, capped at 2 listings per host",
+    "sample_seed": 20260810,
+    "buckets": {
+      "MATCH": 37,
+      "DRIFT": 1,
+      "NO_402": 1,
+      "UNPARSEABLE": 1
+    },
+    "classifiable_probes": 38,
+    "distinct_hosts_in_classifiable_set": 34,
+    "drift_base_rate": 0.0263,
+    "drift_base_rate_note": "1 of 38 classifiable probes, about 2.6 percent",
+    "drift_row": {
+      "host": "api.govparse.io",
+      "declared_amount_usdc": 0.05,
+      "charged_amount_usdc": 25.0,
+      "ratio": 500.0,
+      "assessment": "ambiguous, plausibly legitimate parameter-dependent pricing (unpaid GET carried no filter params and priced the full unfiltered feed), not a confirmed misquote"
+    },
+    "challenge_location": {
+      "responses_with_402": 39,
+      "header_payment_required": 24,
+      "body_json": 14,
+      "unparseable": 1,
+      "header_share_of_402_pct": 61.5,
+      "note": "a body-only parser would misread most correctly-priced live listings as unparseable, not as absent"
+    }
+  },
+  "caveats": [
+    "Revenue is an estimate: declared price x Coinbase's own l30DaysTotalCalls, not an independently measured settlement count.",
+    "Declared price matched charged price in 37 of 38 classifiable probes, which supports using declared price for the revenue estimate, but 40 of 14244 listings is a sample, not a census.",
+    "The single DRIFT row is plausibly legitimate parameter-dependent pricing, not a confirmed misquote.",
+    "The probe reads only accepts[0] of the 402 challenge; a decoy-then-real-price pattern in a later accepts entry would read as a false MATCH and was not checked for.",
+    "About 61 percent of listings that returned a 402 in this sample carried the challenge in a response header, not the body; a body-only parser misreads most of the live market as unparseable.",
+    "Only Base-mainnet USDC listings priced at 100 USD or less are counted; other chains and outlier junk listings (one priced at ten billion dollars) are excluded."
+  ],
+  "prior_reading": {
+    "date": "2026-07-24",
+    "file": "findings/x402-market-2026-07-24.md",
+    "raw_records": 14249,
+    "counted_pool": 14064,
+    "calls_30d_total": 339178,
+    "estimated_gross_30d_usdc": 9747,
+    "distinct_hosts": 1453
+  }
+}
