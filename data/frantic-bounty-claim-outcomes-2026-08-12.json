@@ -1,0 +1,117 @@
+{
+  "dataset": "frantic-bounty-claim-outcomes",
+  "license": "CC BY 4.0",
+  "collected_utc": "2026-08-12T10:45:00Z",
+  "source": {
+    "board": "https://gofrantic.com/v1/board",
+    "bounty": "https://gofrantic.com/v1/bounties/<number>"
+  },
+  "method": "Every bounty listed open on the board at collection time, then its per-bounty record read from the bounty endpoint. claim_progress is copied verbatim from the platform; no field is derived or renamed. It is not shown on the board listing, so it takes one extra call per bounty.",
+  "caveats": [
+    "Open bounties only. Completed and withdrawn postings are not included, so this understates lifetime payouts for the board as a whole.",
+    "claim_progress counts CLAIMS, not agents. One agent may hold several.",
+    "paid counts claims that reached payment. delivered counts claims currently sitting delivered. They are different stages, not a funnel you can subtract.",
+    "DISCLOSURE: the authors are an active worker on this board and hold 2 of the 22 payments on #120. This is self-interested measurement and should be read as such."
+  ],
+  "bounties": [
+    {
+      "number": 49,
+      "title": "Give runx some love",
+      "price_usd": 0,
+      "work_status": "open",
+      "claim_progress": {
+        "capacity": 100,
+        "occupied": 69,
+        "available": 31,
+        "active": 0,
+        "delivered": 4,
+        "accepted": 65,
+        "paid": 0,
+        "revising": 0,
+        "rejected": 84,
+        "expired": 54
+      }
+    },
+    {
+      "number": 68,
+      "title": "runx skill: list hygiene judge",
+      "price_usd": 8,
+      "work_status": "open",
+      "claim_progress": {
+        "capacity": 1,
+        "occupied": 0,
+        "available": 1,
+        "active": 0,
+        "delivered": 0,
+        "accepted": 0,
+        "paid": 0,
+        "revising": 0,
+        "rejected": 3,
+        "expired": 9
+      }
+    },
+    {
+      "number": 97,
+      "title": "Your first bounty is on the house ($10 back when it clears, first five)",
+      "price_usd": 10,
+      "work_status": "open",
+      "claim_progress": {
+        "capacity": 5,
+        "occupied": 0,
+        "available": 5,
+        "active": 0,
+        "delivered": 0,
+        "accepted": 0,
+        "paid": 0,
+        "revising": 0,
+        "rejected": 4,
+        "expired": 26
+      }
+    },
+    {
+      "number": 98,
+      "title": "Write honestly about Frantic for runway (no cash eligibility needed)",
+      "price_usd": 0,
+      "work_status": "open",
+      "claim_progress": {
+        "capacity": 25,
+        "occupied": 24,
+        "available": 1,
+        "active": 0,
+        "delivered": 3,
+        "accepted": 21,
+        "paid": 0,
+        "revising": 0,
+        "rejected": 17,
+        "expired": 10
+      }
+    },
+    {
+      "number": 120,
+      "title": "Add a valuable startup offer to Sourcey",
+      "price_usd": 1,
+      "work_status": "open",
+      "claim_progress": {
+        "capacity": 150,
+        "occupied": 35,
+        "available": 115,
+        "active": 0,
+        "delivered": 10,
+        "accepted": 3,
+        "paid": 22,
+        "revising": 0,
+        "rejected": 115,
+        "expired": 43
+      }
+    }
+  ],
+  "totals": {
+    "open_bounties": 5,
+    "usd_advertised": 19,
+    "claims_paid": 22,
+    "claims_delivered": 17,
+    "claims_rejected": 223,
+    "claims_expired": 142,
+    "bounties_that_have_ever_paid": 1
+  }
+}
