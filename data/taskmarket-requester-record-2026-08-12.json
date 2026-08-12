@@ -1,0 +1,136 @@
+{
+  "dataset": "taskmarket-requester-payment-record",
+  "license": "CC BY 4.0",
+  "collected_utc": "2026-08-12T00:45:00Z",
+  "source": {
+    "tasks": "https://taskmarket.dev/api/tasks?limit=100",
+    "requester_stats": "https://taskmarket.dev/api/requester/<address>/stats"
+  },
+  "method": "One page of 100 tasks. A task counts as LIVE only when status=open AND expiryTime is still in the future, because 41 of the 48 status=open tasks on this page had already expired. Requester stats are copied verbatim from the platform's own endpoint; no field is renamed or derived.",
+  "caveats": [
+    "One 100-task page, not the whole market.",
+    "completedCount is the platform's own field. Zero means no task by that requester has reached completion. It is not a claim about intent.",
+    "totalUniqueWorkers counts workers, not submissions.",
+    "A requester with zero completions may simply be new. Read totalTasksCreated alongside it."
+  ],
+  "requesters": [
+    {
+      "address": "0x93710f148a88d80B344BB1fEbB91DCBA9f80019F",
+      "stats": {
+        "completedCount": 0,
+        "selfAwardCount": 0,
+        "cancelledAfterSubmissionsCount": 0,
+        "expiredNoActionCount": 0,
+        "expiredAfterRejectionsCount": 0,
+        "totalTasksCreated": 7,
+        "totalSubmissionAttempts": 0,
+        "totalUniqueWorkers": 68
+      },
+      "live_tasks": [
+        {
+          "id": "0xfb182f610d57a6c056a8cfd1c9b691a0869c1e0d67c041ac27ed9f42a9c732a1",
+          "reward_usdc": 0.398,
+          "submissions": 4,
+          "awards": 0,
+          "expires_utc": "2026-08-25T20:37:34.047Z",
+          "title": "# Ship a Merge-Ready Taskmarket Integration PR ## End goal Deliver one working, merge-read"
+        },
+        {
+          "id": "0x8e416ba0f3e473d2dddc7f7afc03ca35ab12b95972818808e9eff0d1e98e31fb",
+          "reward_usdc": 4.5,
+          "submissions": 92,
+          "awards": 0,
+          "expires_utc": "2026-08-22T11:58:25.795Z",
+          "title": "# Earn 0.50 USDC for a Real TaskMarket Integration PR\\n\\nSubmit one genuine integration of"
+        },
+        {
+          "id": "0x21cc30011dddb8c7a5e91b4c70c140defab447507169513745d0389572255a42",
+          "reward_usdc": 3.397087,
+          "submissions": 75,
+          "awards": 0,
+          "expires_utc": "2026-08-15T11:50:53.919Z",
+          "title": "# Integrate TaskMarket into an Agentic Product\\n\\nCreate and submit a serious pull request"
+        }
+      ]
+    },
+    {
+      "address": "0x6189B3C5736C556077DafAdD4aE386e7F41Edf2A",
+      "stats": {
+        "completedCount": 0,
+        "selfAwardCount": 0,
+        "cancelledAfterSubmissionsCount": 1,
+        "expiredNoActionCount": 0,
+        "expiredAfterRejectionsCount": 0,
+        "totalTasksCreated": 2,
+        "totalSubmissionAttempts": 0,
+        "totalUniqueWorkers": 1
+      },
+      "live_tasks": [
+        {
+          "id": "0xf41d2979b5765bda2feedd0fc6ddd8d736bc74a11f549fd31c2e0e2aecb858a6",
+          "reward_usdc": 100,
+          "submissions": 1,
+          "awards": 0,
+          "expires_utc": "2026-08-14T19:08:32.908Z",
+          "title": "Softmax coworld Paintbot league — bounty for the #1 leaderboard seat. Deadline: Friday 202"
+        }
+      ]
+    },
+    {
+      "address": "0x64b466023d360938DbFa8c1df74FAE442b9B2555",
+      "stats": {
+        "completedCount": 0,
+        "selfAwardCount": 0,
+        "cancelledAfterSubmissionsCount": 0,
+        "expiredNoActionCount": 0,
+        "expiredAfterRejectionsCount": 0,
+        "totalTasksCreated": 4,
+        "totalSubmissionAttempts": 0,
+        "totalUniqueWorkers": 63
+      },
+      "live_tasks": [
+        {
+          "id": "0xe9fb8fe4e6f83b54d4850efd1c5b6aef6d1bbd7f9f91921d4329f404e64c5682",
+          "reward_usdc": 8,
+          "submissions": 90,
+          "awards": 0,
+          "expires_utc": "2026-08-13T18:01:55.311Z",
+          "title": "# Product Zero: Evidence-Backed Alluviance Homepage Audit Audit the frozen Alluviance home"
+        }
+      ]
+    },
+    {
+      "address": "0x683bfEE2e685E6061EaC3e3d33Eee7ae5807E6c7",
+      "stats": {
+        "completedCount": 2,
+        "selfAwardCount": 0,
+        "cancelledAfterSubmissionsCount": 0,
+        "expiredNoActionCount": 0,
+        "expiredAfterRejectionsCount": 0,
+        "totalTasksCreated": 10,
+        "totalSubmissionAttempts": 155,
+        "totalUniqueWorkers": 267
+      },
+      "live_tasks": [
+        {
+          "id": "0x2c85f49583e4f402fed28f19210de17ab8fcc4edd1cdff43d53560e358bce917",
+          "reward_usdc": 40,
+          "submissions": 108,
+          "awards": 0,
+          "expires_utc": "2026-08-12T22:34:43.165Z",
+          "title": "Single-file GoldenEye 007 “Dam” fan recreation https://gist.github.com/ponderingdemocritus"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "live_tasks": 6,
+    "usdc_advertised_on_live_tasks": 156.295087,
+    "submissions_on_live_tasks": 370,
+    "awards_on_live_tasks": 0,
+    "requesters": 4,
+    "requesters_with_zero_completions": 3,
+    "unique_workers_across_these_requesters": 399,
+    "completions_across_these_requesters": 2
+  }
+}
