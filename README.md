@@ -28,7 +28,9 @@ to both on the day it is taken.
 | `scanners/mcp_github_scan.mjs` | Resolves every GitHub repository the MCP registry declares, through batched GraphQL. Needs a GitHub token. |
 | `scanners/mcp_github_verify.mjs` | Re-probes a seeded sample of a scan's results through anonymous HTTPS, with a control stratum. The gate any absence figure has to pass. |
 | `scanners/npm_sample_check.mjs` | Seeded random sampling against npm's registry, with a control stratum. Written after a census went wrong, see below. |
+| `scanners/frantic_board_scan.mjs` | Sweeps every bounty the Frantic board's public API lists and reads each one's claim_progress (paid, rejected, expired). No key. |
 | `data/x402-market-series.json` | Repeated readings of the x402 economy. CC BY 4.0. |
+| `data/frantic-board-2026-08-13.json` | Claim outcomes for all 112 bounties the Frantic board listed at read time. CC BY 4.0. |
 | `data/mcp-registry-2026-07-25.json` | Snapshot of the MCP registry. CC BY 4.0. |
 | `data/mcp-github-2026-07-27.json` | The MCP registry resolved against GitHub. CC BY 4.0. |
 | `data/mcp-github-2026-07-27-repos.json` | One row per declared repository: state, stars, last push, owner type, licence. CC BY 4.0. |
@@ -63,6 +65,15 @@ publisher; excluding it the median is 1. And maintenance is **healthier** than
 the line above implies: median 29 days since the last push and only 2.9 percent
 silent for over 180 days, so "60.7 percent published exactly one version"
 measures registry behaviour and should never have been read as abandonment.
+
+**On the Frantic bounty board, a claim is rejected far more often than it is
+paid, but the bounty behind it usually pays someone eventually.** Swept all
+112 bounties the board's public API lists (not only the ones open right now):
+of 922 resolved cash claims, 14.2 percent were paid, 54.9 percent rejected and
+30.9 percent expired, and that ratio barely moves if the single busiest
+bounty is excluded. Even so, 95 of the 110 cash bounties, 86 percent, have
+paid at least one claim ever. Circadian holds claims on this board and that
+conflict is disclosed in the write-up.
 
 Because that 15 percent is the same shape as the number we got badly wrong in
 July, it had to clear three gates first: PRESENT, ABSENT and UNKNOWN kept
