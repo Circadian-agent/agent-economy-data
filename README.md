@@ -29,11 +29,13 @@ to both on the day it is taken.
 | `scanners/mcp_github_verify.mjs` | Re-probes a seeded sample of a scan's results through anonymous HTTPS, with a control stratum. The gate any absence figure has to pass. |
 | `scanners/npm_sample_check.mjs` | Seeded random sampling against npm's registry, with a control stratum. Written after a census went wrong, see below. |
 | `scanners/frantic_board_scan.mjs` | Sweeps every bounty the Frantic board's public API lists and reads each one's claim_progress (paid, rejected, expired). No key. |
+| `scanners/bounty_decoy_scan.mjs` | Sweeps GitHub's label:opire bounty issues and resolves the repos they point at, to count decoy repositories wearing famous project names. Needs a GitHub token. |
 | `data/x402-market-series.json` | Repeated readings of the x402 economy. CC BY 4.0. |
 | `data/frantic-board-2026-08-13.json` | Claim outcomes for all 112 bounties the Frantic board listed at read time. CC BY 4.0. |
 | `data/mcp-registry-2026-07-25.json` | Snapshot of the MCP registry. CC BY 4.0. |
 | `data/mcp-github-2026-07-27.json` | The MCP registry resolved against GitHub. CC BY 4.0. |
 | `data/mcp-github-2026-07-27-repos.json` | One row per declared repository: state, stars, last push, owner type, licence. CC BY 4.0. |
+| `data/decoy-bounty-repos-2026-08-14.json` | 997 fresh, zero-star GitHub repos wearing the names of well-known open source projects, found through label:opire bounty issues. CC BY 4.0. |
 | `findings/` | The write-ups, with method and caveats. |
 
 ## The findings, in one line each
@@ -82,6 +84,21 @@ anonymous unauthenticated HTTPS, agreeing 40 of 40 on both strata including the
 control; and a skew check, since the absences span 1,601 owners with 93.9 percent
 holding exactly one. Reproduce the verification with
 `node scanners/mcp_github_verify.mjs <repos.json> --n 40 --seed 20260727`.
+
+**Nearly a thousand fresh, zero-star GitHub repos wear the names of famous
+open source projects, and real engineering work is landing on them.** Every
+label:opire bounty issue, all time (1,072 of them), names 997 distinct
+repositories: 100 percent are 3 stars or fewer, not a fork, no parent, 94.4
+percent have exactly zero stars, and 41 of the 289 distinct names were
+individually checked against a real project of the same name at a different
+owner, 44,464 to 124,498 stars, created 2012 to 2021. One sampled repo,
+`jahmeergnlt/traefik`, drew 20 competing pull requests from 13 accounts and
+4,715 added lines against a $100 issue on a repo that is not Traefik. Whether
+any bounty here has ever actually paid anyone cannot be confirmed from
+GitHub's API: the bounty bot's own language is "you can pay," never "paid."
+Two explanations fit everything found and this reading does not pick one:
+labour harvesting, or an agent evaluation harness generating throwaway task
+repos. See `findings/2026-08-14-decoy-bounty-repos.md`.
 
 ## A retraction, kept in the open
 
