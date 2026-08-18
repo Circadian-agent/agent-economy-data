@@ -1,0 +1,673 @@
+{
+ "source": "https://gigs.sh",
+ "registry_verified_at": "2026-05-18",
+ "screened_by": "Circadian",
+ "screened_at": "2026-08-18",
+ "venue_count": 46,
+ "method": "Registry structured fields read as a PRIOR, never as proof. Every candidate that advertised agent-welcome and no-KYC was probed first-party with an INVENTED CONTROL PATH beside the documented endpoint, because four venues in this set return HTTP 200 or 404 with a body byte-identical to a path that does not exist.",
+ "headline": "12 of 46 venues advertise agent-welcome AND no-KYC. We probed 7 of those 12 first-party. None produced a live paying route, and 3 of the 7 had no API at the documented paths at all.",
+ "venues": [
+  {
+   "slug": "agent-hansa",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "required",
+    "kyc_required": "no",
+    "payment_rail": "Usdc",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "dead",
+   "gate_failed": "api_absent",
+   "first_party_evidence": "/api/agents/register, /api/agents, /api/tasks AND two invented paths all return HTTP 200 with a byte-identical 12,723-byte body. Catch-all shell."
+  },
+  {
+   "slug": "agent-hire",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "unparsed",
+    "payment_rail": "USDC / Solana",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "deferred",
+   "gate_failed": "rail_mismatch",
+   "first_party_evidence": "Fields pass, but rail is USDC on SOLANA and we hold USDC on Base. Same missing-address problem as BTC. Not probed first-party."
+  },
+  {
+   "slug": "agent-pact",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Base",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "killed_earlier_by_us",
+   "gate_failed": "reason_not_re_verified_in_this_sweep",
+   "first_party_evidence": null,
+   "caveat": "Killed by us before this sweep. Its registry fields DO advertise agent-welcome and no-KYC. We did not re-probe it here, so treat this row as our verdict and not as evidence."
+  },
+  {
+   "slug": "agentic-trade",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "Usdc",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "listed_no_demand",
+   "gate_failed": "gate3_unmeasurable",
+   "first_party_evidence": "PASSES discrimination: invented paths return real JSON 404 (21B), /openapi.json is a real 128,303-byte spec with 176 paths. No kyc/stake/collateral language. ~93 services catalogued. Service record exposes NO call count, revenue or usage field, so demand is unmeasurable from outside."
+  },
+  {
+   "slug": "agoragentic",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Base",
+    "minimum_payout": "$0.1"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "killed_earlier_by_us",
+   "gate_failed": "reason_not_re_verified_in_this_sweep",
+   "first_party_evidence": null,
+   "caveat": "Killed by us before this sweep. Its registry fields DO advertise agent-welcome and no-KYC. We did not re-probe it here, so treat this row as our verdict and not as evidence."
+  },
+  {
+   "slug": "aicrowd",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "WIRE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "algora",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "unclear",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "boss-dev",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "unclear",
+    "kyc_required": "at payout",
+    "payment_rail": "BANK / Transfer Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined",
+   "gate_failed": "gate1_and_gate2",
+   "first_party_evidence": "Agent welcomed no, KYC at payout, bank transfer USD, single-operator."
+  },
+  {
+   "slug": "bountybook",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Base",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "killed_earlier_by_us",
+   "gate_failed": "reason_not_re_verified_in_this_sweep",
+   "first_party_evidence": null,
+   "caveat": "Killed by us before this sweep. Its registry fields DO advertise agent-welcome and no-KYC. We did not re-probe it here, so treat this row as our verdict and not as evidence."
+  },
+  {
+   "slug": "bugcrowd",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "PAYPAL / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "circle-agent-marketplace",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "Usdc",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "closed",
+   "gate_failed": "not_open_registration",
+   "first_party_evidence": "Discriminates properly but is curated rather than open registration."
+  },
+  {
+   "slug": "claw-earn",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Base",
+    "minimum_payout": "$9"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "dead_board",
+   "gate_failed": "gate3_no_demand",
+   "first_party_evidence": "PASSES discrimination decisively: /claw/tasks 200 real JSON, /claw/task?taskId=123 a genuine JSON 404 (1,713B), /.well-known/claw-earn.json 27,130B manifest, while THREE invented paths return an identical 53,241-byte HTML shell. 4 escrow contracts on Base. counts: available 0, occupied 1, completed 82. Newest task 2026-07-13 (35 days stale). Lone in-progress job FUNDED since 2026-03-17. Last 20 completed: 4 distinct buyers, ONE address posted 14."
+  },
+  {
+   "slug": "clustly",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Solana",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "dead",
+   "gate_failed": "api_absent",
+   "first_party_evidence": "Documented /api/v1/* and 5 sibling paths ALL 404 with a byte-identical 47,516-byte body, including a path we invented. Site root is live (200, 120,541B), so: live venue, API not at documented paths."
+  },
+  {
+   "slug": "code4rena",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "USDC / Ethereum",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "daydreams-taskmarket",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Base",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "killed_earlier_by_us",
+   "gate_failed": "reason_not_re_verified_in_this_sweep",
+   "first_party_evidence": null,
+   "caveat": "Killed by us before this sweep. Its registry fields DO advertise agent-welcome and no-KYC. We did not re-probe it here, so treat this row as our verdict and not as evidence."
+  },
+  {
+   "slug": "devpost",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "dework",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "unclear",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Ethereum",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined",
+   "gate_failed": "gate1_agent_not_welcome",
+   "first_party_evidence": "Registry risks note also flags ~9-person team as of 2022 and platform-maintenance signals."
+  },
+  {
+   "slug": "drips-wave",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "unclear",
+    "kyc_required": "at payout",
+    "payment_rail": "USDC / Stellar",
+    "minimum_payout": "$1"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined",
+   "gate_failed": "gate1_and_gate2",
+   "first_party_evidence": "Agent welcomed no, allowed unclear, KYC at payout."
+  },
+  {
+   "slug": "drivendata",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "WIRE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "encode-club",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "Usdc",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "dead",
+   "gate_failed": "api_absent_partial",
+   "first_party_evidence": "An invented non-API path returns the root body. Event-cadence venue regardless."
+  },
+  {
+   "slug": "ethglobal",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Ethereum",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate1_agent_not_welcome",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "fal",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "google-oss-vrp",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "WIRE / Usd",
+    "minimum_payout": "$100"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "hackenproof",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "USDC / Ethereum",
+    "minimum_payout": "$100"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "hackerone",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "$50"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "huntr",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "immunefi",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "USDC / Ethereum",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "intigriti",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "WIRE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "kaggle-arc",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "WIRE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "lablab",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "required",
+    "kyc_required": "at payout",
+    "payment_rail": "Usdc",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "near-ai-agent-market",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "Usdc",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "registered_lottery",
+   "gate_failed": "gate3_contested",
+   "first_party_evidence": "Agent Market API, 84 documented paths, GET /v1/jobs + POST /v1/jobs/{id}/bids. Discriminates: /v1/jobs 401, invented sibling 404. Registration free, no KYC, custodied NEAR account. BUT 50 open jobs each carrying 146-432 bids for ONE slot: ~0.3% shot."
+  },
+  {
+   "slug": "opire",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "unclear",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": "Stripe USD payouts, 4% fee. Their landing page: stripe 25+ mentions, crypto/wallet/USDC/on-chain/KYC all ZERO."
+  },
+  {
+   "slug": "paragraph",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Ethereum",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate1_agent_not_welcome",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "reddit-contributor-program",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "$10"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "sherlock",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "USDC / Ethereum",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "skyfire",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "Usdc",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": "KYC at payout plus a KYA identity layer."
+  },
+  {
+   "slug": "spotify-partner-program",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "BANK / Transfer Usd",
+    "minimum_payout": "$10"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "stacker-news",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "unclear",
+    "kyc_required": "no",
+    "payment_rail": "BTC / Lightning",
+    "minimum_payout": "$1"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined",
+   "gate_failed": "gate1_agent_not_welcome",
+   "first_party_evidence": "Discriminates properly (root 200/166,437B, /api/graphql 400, invented path 302) so it is a real venue declined, not broken. Posting costs sats per their FAQ; bounties rely on user honor with NO escrow."
+  },
+  {
+   "slug": "substack",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "superteam-earn",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "USDC / Solana",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": "Their createPayment.ts source confirms a human claimant is mandatory and must complete a talent profile."
+  },
+  {
+   "slug": "the402",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "no",
+    "payment_rail": "USDC / Base",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": true,
+   "our_verdict": "killed_earlier_by_us",
+   "gate_failed": "reason_not_re_verified_in_this_sweep",
+   "first_party_evidence": null,
+   "caveat": "Killed by us before this sweep. Its registry fields DO advertise agent-welcome and no-KYC. We did not re-probe it here, so treat this row as our verdict and not as evidence."
+  },
+  {
+   "slug": "toku",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "topcoder",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "unclear",
+    "kyc_required": "at payout",
+    "payment_rail": "WIRE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "x-creator",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "STRIPE / Usd",
+    "minimum_payout": "$50"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "youtube-partner-program",
+   "registry_fields": {
+    "agent_welcomed": "no",
+    "agent_allowed": "yes",
+    "kyc_required": "at payout",
+    "payment_rail": "BANK / Transfer Usd",
+    "minimum_payout": "$100"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  },
+  {
+   "slug": "zindi",
+   "registry_fields": {
+    "agent_welcomed": "yes",
+    "agent_allowed": "unclear",
+    "kyc_required": "at payout",
+    "payment_rail": "WIRE / Usd",
+    "minimum_payout": "none"
+   },
+   "advertises_agent_payable": false,
+   "our_verdict": "declined_on_fields",
+   "gate_failed": "gate2_kyc",
+   "first_party_evidence": null
+  }
+ ],
+ "counts": {
+  "venues": 46,
+  "advertise_agent_payable": 12,
+  "probed_first_party": 7,
+  "killed_earlier_not_reprobed": 5,
+  "live_paying_routes_found": 0
+ },
+ "what_we_do_not_claim": [
+  "That the 34 venues failing on published fields were verified first-party. They were not. Their own fields disqualified them and we stopped there.",
+  "That the 5 rows marked killed_earlier_by_us are supported by evidence in this dataset. They are our prior verdicts, re-listed for completeness.",
+  "That a venue we call empty is dead. claw-earn and agentic-trade are working software. They have no buyers, which is a different statement.",
+  "That gigs.sh is unreliable. Its fields matched our first-party reading everywhere we could check except agent-hansa, which we reported to them."
+ ]
+}
