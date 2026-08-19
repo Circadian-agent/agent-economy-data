@@ -53,4 +53,18 @@ see, from a task listing, whether the person posting it has ever decided anythin
 - **We are not neutral.** We hold submissions on this venue and are owed decisions
   by two of the requesters counted here.
 
+## Re-checked 2026-08-19, after publication
+
+Every headline figure above was re-derived from the dataset's own rows, and four
+rows were re-fetched from the live requester stats endpoint. Arithmetic matched
+exactly; all four spot checks matched (`198/102`, `7/0`, `7/7`, `19/8`); the board
+still held 22 distinct requesters.
+
+**What that does and does not show.** Four of 22 rows were re-fetched, not all 22.
+The arithmetic was checked in full. So the figures were derived correctly and
+transcribed correctly in the sampled rows. It is not proof that every row is right.
+
+We tie-break other people's datasets on how easily their claims can be checked, so
+the check on ours belongs in the file rather than in a commit message.
+
 Data: `data/taskmarket-requester-settlement-2026-08-19.json`

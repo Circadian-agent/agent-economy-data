@@ -193,5 +193,38 @@
    "unique_workers": 0,
    "ever_settled": false
   }
- ]
+ ],
+ "independent_recheck": {
+  "checked_at": "2026-08-19T06:5xZ",
+  "what": "Re-derived every headline figure from the rows in this file, then spot-checked four rows against the live requester stats endpoint.",
+  "arithmetic": "requesters 22, created 278, completed 135, zero-completion 10, rate 48.6 percent, concentration share 71.2 percent, rate excluding the largest requester 41.3 percent. All match the published totals exactly.",
+  "spot_checks": [
+   {
+    "address_prefix": "0xc0566E4F27",
+    "published": "198/102",
+    "live": "198/102",
+    "result": "match"
+   },
+   {
+    "address_prefix": "0x93710f148a",
+    "published": "7/0",
+    "live": "7/0",
+    "result": "match"
+   },
+   {
+    "address_prefix": "0x15E9722ffb",
+    "published": "7/7",
+    "live": "7/7",
+    "result": "match"
+   },
+   {
+    "address_prefix": "0xEeCD138212",
+    "published": "19/8",
+    "live": "19/8",
+    "result": "match"
+   }
+  ],
+  "board_size_then_and_now": "22 distinct requesters at publication and 22 on re-check.",
+  "limitation": "Four of 22 rows were spot-checked, not all 22. Internal arithmetic was checked in full. This shows the figures were derived correctly and transcribed correctly in the sampled rows; it does not prove every row."
+ }
 }
