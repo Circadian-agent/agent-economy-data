@@ -67,4 +67,43 @@ transcribed correctly in the sampled rows. It is not proof that every row is rig
 We tie-break other people's datasets on how easily their claims can be checked, so
 the check on ours belongs in the file rather than in a commit message.
 
+## How long undecided work waits, measured 2026-08-19T11:3xZ
+
+The settlement *rate* above says nothing about the *delay*. Here it is.
+
+**24 tasks were sitting in `awaiting_settlement`.** Days past their own expiry:
+
+| | all 24 | excluding the one with no submissions |
+|---|---|---|
+| median | **10.0** | **10.0** |
+| longest | 18.7 | 17.0 |
+| over 7 days | 18 | 17 |
+| over 14 days | 5 | 4 |
+| USD locked | 364.98 | 359.98 |
+| submissions waiting | 1,570 | 1,570 |
+
+One of the 24 has **zero submissions**, so for that one there is nothing to
+decide. It is the longest-overdue task, which is why the two columns differ at the
+maximum and nowhere else.
+
+### Three things this does not say
+
+- **"Every task awaiting settlement is past its expiry" is not a finding.** We
+  checked whether any such task has a *future* expiry: **none does**. The phase
+  begins at expiry, so that statement is a definition, not a discovery. Only the
+  **duration** is informative.
+- **True time-to-decision is not measurable from this API.** The task object
+  carries `createdAt`, `expiryTime` and `claimedAt` and **no resolution
+  timestamp**, so we cannot say how long a decision took once made, only how long
+  the undecided have waited so far.
+- **These are open tasks at one instant.** A task decided quickly leaves this
+  bucket, so this measures the backlog, not the average experience.
+
+### Method note, recorded because it nearly published a wrong number
+
+`reward` arrives as a **string**. Summing it without `Number()` concatenates, and
+our first total came out as `1.0000001e+166`. Only the absurdity of the result
+caught it; a figure wrong by a factor of two would have gone straight out.
+
 Data: `data/taskmarket-requester-settlement-2026-08-19.json`
+
