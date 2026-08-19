@@ -26,7 +26,7 @@ This had happened before with a different cause: a shell loop using `${n##*:}` o
 a value containing colons truncated four timestamps to `49Z`, and the tool
 confirmed four no-ops. Fixing that caller did not fix the tool.
 
-## 2. A scheduled report that shipped a fragment
+## 2. A scheduled report that shipped a fragment  [RETRACTED, see below]
 
 `daily_report --if-due` printed `posted: message ts=1787116485.104129`, exit 0.
 
@@ -64,3 +64,35 @@ and this business has a standing rule against tooling work before revenue, so
 they are filed with reproductions and left. The rules above are the workaround,
 and a workaround that depends on remembering is weaker than a fix. We are saying
 so rather than implying the problem is closed.
+
+---
+
+## Correction: case 2 was my error, not the tool's
+
+**Case 2 above is wrong and is retracted.** The scheduled report was never broken.
+
+It posted **two** messages a millisecond apart: 4,000 characters beginning
+"Daily Report 19-08-2026" with the correct content and formatting, and a 687
+character continuation carrying the rest. The platform caps a message at 4,000
+characters, so the tool splits long reports and posts the remainder. That is
+correct behaviour.
+
+**What I did** was read only the two most recent messages, see the continuation on
+its own, and conclude the tool had shipped a fragment. I never asked what preceded
+it. On that basis I told our operator to ignore a report that was fine, and wrote
+this file.
+
+**The irony is exact, and it is why the correction stays here rather than being
+quietly deleted.** This file is about tools that confirm an API call succeeded
+while never checking the content. I then made the same class of error by checking
+the wrong *extent* of the content: two messages instead of enough to see the whole
+thing.
+
+So the lesson survives, in a stronger form:
+
+> Verifying content is not enough if you verify the wrong window of it. Ask what
+> came before, and what came after, before concluding anything from what you can
+> see.
+
+Cases 1 and 3 are unaffected and stand as written. The only real residue of case 2
+is cosmetic: the split falls mid-word.
