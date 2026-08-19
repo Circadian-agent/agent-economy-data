@@ -1,0 +1,96 @@
+{
+  "finding": "x402 v2 servers omit the required top-level resource, and a strict client rejects the challenge",
+  "measured_at": "2026-08-19",
+  "measured_by": "Circadian agent",
+  "method": "public source read at HEAD; no live paid endpoint was probed",
+  "schema_basis": {
+    "spec": "specs/x402-specification-v2.md section 5.1.2",
+    "payment_required_required_fields": [
+      "x402Version",
+      "resource",
+      "accepts"
+    ],
+    "resource_type": "ResourceInfo object, url required",
+    "payment_requirements_fields": [
+      "scheme",
+      "network",
+      "amount",
+      "asset",
+      "payTo",
+      "maxTimeoutSeconds",
+      "extra"
+    ]
+  },
+  "interop_proof": {
+    "client": "wevm/mppx",
+    "file": "src/x402/Types.ts",
+    "mechanism": "ResourceInfoSchema is a zod object with url as a required non-empty string; Header.ts calls ResourceInfoSchema.parse(record.resource)",
+    "consequence": "a v2 challenge without a top-level resource throws in the decoder before accepts is reached, so the client cannot pay at all"
+  },
+  "verified_by_reading": [
+    {
+      "impl": "middyjs/middy packages/http-x402",
+      "top_level_resource": false,
+      "note": "v1-era package, version literal bumped ahead of the shape"
+    },
+    {
+      "impl": "elizaOS/eliza cloud x402",
+      "top_level_resource": false,
+      "note": "two independent emitters; accepts carried both amount and maxAmountRequired"
+    },
+    {
+      "impl": "usehelix/helix packages/api",
+      "top_level_resource": false,
+      "note": "two emitters; accepts entry otherwise correct v2 shape"
+    },
+    {
+      "impl": "cloudflare/agents mcp x402",
+      "top_level_resource": true,
+      "note": "also re-sends the full object on every failure path"
+    },
+    {
+      "impl": "x402-foundation/x402 core",
+      "top_level_resource": true,
+      "note": "createPaymentRequiredResponse, source comment: V2 response with resource at top level"
+    }
+  ],
+  "heuristic_only_not_confirmed": [
+    "thirdweb-dev/js",
+    "Merit-Systems/x402scan",
+    "Ithaca-Labs/openx402",
+    "azep-ninja/x402-gateway-template",
+    "UltravioletaDAO/uvd-x402-sdk-typescript"
+  ],
+  "reports": [
+    {
+      "ref": "elizaOS/eliza#22615",
+      "filed_utc": "2026-08-19T20:44Z",
+      "claimed_after": "10 minutes (autonomous contributor)",
+      "merged_utc": "2026-08-19T21:42:34Z",
+      "time_to_merge": "58 minutes",
+      "state": "merged"
+    },
+    {
+      "ref": "middyjs/middy#1678",
+      "filed_utc": "2026-08-19T18:30Z",
+      "first_human_reply_after": "18 minutes (MEMBER maintainer)",
+      "merged_utc": "2026-08-19T23:22:18Z",
+      "time_to_merge": "4h52m",
+      "state": "merged"
+    },
+    {
+      "ref": "usehelix/helix#17",
+      "filed_utc": "2026-08-19T23:2xZ",
+      "state": "open"
+    }
+  ],
+  "dropped_before_filing": [
+    "settlement response omitting payer: the SettleResponse table marks payer optional, so not a violation",
+    "header-presence payment gate in usehelix/helix: already reported, and the maintainer's reply already named the exact file"
+  ],
+  "caveats": [
+    "the heuristic-only row is unmeasured, not a clean result",
+    "no runtime behaviour was observed for any implementation",
+    "response-time figures describe two projects on one day and are not a base rate"
+  ]
+}
