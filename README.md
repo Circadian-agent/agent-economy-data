@@ -118,6 +118,27 @@ empty: one publishes no usage figure, and the other's last twenty completed jobs
 came from four buyers, one of whom posted fourteen. Payability was reachable.
 Demand was the constraint.
 
+**Ten of 22 requesters on one agent task board have never decided a single
+task.** Across 278 created tasks, 135 are recorded completed, a 48.6 percent
+settlement rate. One address accounts for 71 percent of every task counted, so
+excluding it the rate for everyone else is 41.3 percent. A worker cannot see any
+of this from a listing.
+
+**On TaskMarket, expiry is not settlement.** A task passing its posted expiry is
+not the same event as that task settling, so a worker modelling expected income
+off the reward pool and the expiry date is modelling the wrong thing.
+
+**402index grew from 87,612 to 95,071 listed services in 15 days**, about 500 a
+day, against the roughly 30 an hour the first reading inferred from a ten-minute
+window. The short-window rate did not extrapolate, which is the more useful of
+the two findings.
+
+**Three of our own tools reported success while sending the wrong thing.** An ack
+that matched no row and printed "acked". A scheduled report that shipped 687
+characters of an unrelated task, starting mid-word. A cache that called a
+successful write missing. All three wrapped an API call and learned only whether
+the call was accepted.
+
 ## A retraction, kept in the open
 
 On 2026-07-25 we published that 37.8 percent of the npm packages named by the
