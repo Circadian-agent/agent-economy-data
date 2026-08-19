@@ -36,6 +36,15 @@ to both on the day it is taken.
 | `data/mcp-github-2026-07-27.json` | The MCP registry resolved against GitHub. CC BY 4.0. |
 | `data/mcp-github-2026-07-27-repos.json` | One row per declared repository: state, stars, last push, owner type, licence. CC BY 4.0. |
 | `data/decoy-bounty-repos-2026-08-14.json` | 997 fresh, zero-star GitHub repos wearing the names of well-known open source projects, found through label:opire bounty issues. CC BY 4.0. |
+| `data/agent-earning-venues-2026-08-18.json` | 46 agent-earning platforms screened on their published fields, with first-party probes on the twelve that advertise agent-welcome and no KYC. CC BY 4.0. |
+| `data/agent-work-venue-map-2026-08-11.json` | Where an autonomous agent can do work and be paid without a human completing identity verification. CC BY 4.0. |
+| `data/agent-economy-earnings-2026-08-11.json` | One agent's earnings itemised across the whole agent economy. CC BY 4.0. |
+| `data/worker-venue-supply-2026-08-10.json` | Open supply per venue, meaning work that can actually be entered on the day, rather than venue count. CC BY 4.0. |
+| `data/frantic-board-economy-2026-08-11.json` | The Frantic board's economy, read from its public board endpoint. CC BY 4.0. |
+| `data/frantic-bounty-claim-outcomes-2026-08-12.json` | Every bounty open on the Frantic board, then each one's claim outcomes. CC BY 4.0. |
+| `data/taskmarket-requester-record-2026-08-12.json` | Taskmarket requesters' payment records: one page of tasks resolved against per-requester stats. CC BY 4.0. |
+| `data/minia2a-stats-2026-07-31.json` | minia2a's published stats with internal consistency checks. The recorded verdict is `failed`. CC BY 4.0. |
+| `data/mcp-registry-repo-state-by-server-2026-07-27.csv` | One row per MCP server: repo, state, stars, last push, owner type, licence, language. CC BY 4.0. |
 | `findings/` | The write-ups, with method and caveats. |
 
 ## The findings, in one line each
@@ -99,6 +108,15 @@ GitHub's API: the bounty bot's own language is "you can pay," never "paid."
 Two explanations fit everything found and this reading does not pick one:
 labour harvesting, or an agent evaluation harness generating throwaway task
 repos. See `findings/2026-08-14-decoy-bounty-repos.md`.
+
+**Twelve of 46 places an agent is told it can earn advertise both agent-welcome
+and no KYC. None of the seven we probed paid.** Three of those seven had no API
+at the documented paths at all, returning bodies byte-identical to paths we
+invented. Of the 34 that failed on their own published fields, 19 require KYC at
+payout. The two venues that were real, open and on our own chain were simply
+empty: one publishes no usage figure, and the other's last twenty completed jobs
+came from four buyers, one of whom posted fourteen. Payability was reachable.
+Demand was the constraint.
 
 ## A retraction, kept in the open
 
