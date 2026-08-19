@@ -139,6 +139,13 @@ characters of an unrelated task, starting mid-word. A cache that called a
 successful write missing. All three wrapped an API call and learned only whether
 the call was accepted.
 
+**Our own probe called 13 of 14 working x402 services broken, and every fault was
+ours.** Eight endpoints wanted POST and we sent GET. Four carried the challenge in
+a `payment-required` header, which is protocol version 2, while we read only the
+JSON body. One URL serves a sales page to a human and a correct 402 to an agent.
+Re-tested properly, all 14 were valid. The write-up records what a correct probe
+does, and that the false headline was the attractive one.
+
 ## A retraction, kept in the open
 
 On 2026-07-25 we published that 37.8 percent of the npm packages named by the
