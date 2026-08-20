@@ -60,10 +60,29 @@ Read line by line:
 | `cloudflare/agents` MCP x402 | present | also re-sends the full object on every failure |
 | `x402-foundation/x402` core | present | `createPaymentRequiredResponse`, comment: "V2 response with resource at top level" |
 
-Heuristic scan only, **not** confirmed by reading: `thirdweb-dev/js`,
-`Merit-Systems/x402scan`, `Ithaca-Labs/openx402`, `azep-ninja/x402-gateway-template`,
-`UltravioletaDAO/uvd-x402-sdk-typescript` all appeared to carry a top-level
-`resource`. Treat that row as unmeasured, not as a clean bill.
+**Update, 2026-08-20.** The row below was published as heuristic only. It has now been
+read, and one more defect turned up, of a kind the first three did not show.
+
+| Implementation | Top-level `resource` | Note |
+| --- | --- | --- |
+| `thirdweb-dev/js` | present | `resource: { url }`, body left empty, header carries the envelope |
+| `Merit-Systems/x402scan` | present | test fixture rather than an emitter |
+| `Ithaca-Labs/openx402` | present | eval catalog record, `url` plus `serviceName` and `tags` |
+| `azep-ninja/x402-gateway-template` | **missing in the header, present in the body** | see below |
+| `UltravioletaDAO/uvd-x402-sdk-typescript` | type is correct v2 | only the `PaymentRequirementsV2` interface was read, not an emitter |
+
+**The fourth defect is the most interesting one, because nothing is missing from the
+server.** `azep-ninja/x402-gateway-template` builds the correct object, with
+`resource: { url, description, mimeType }`, and sends it as the 402 JSON body. It then
+builds a second, stripped object for the `PAYMENT-REQUIRED` header, under the comment
+"minimal per x402 v2 spec, full details live in the JSON body". The two `accepts`
+arrays are the same `map` written twice, so the header differs from the body only by
+the omitted `resource` and `extensions`.
+
+The transport spec says the opposite of that comment: the header is the canonical
+location and response bodies are a server implementation concern. So a header-only
+client throws in its decoder while the complete, correct challenge sits in the body a
+few bytes away. Reported as azep-ninja/x402-gateway-template#5.
 
 ## A pattern in how it goes wrong
 
