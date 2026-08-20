@@ -1,0 +1,2974 @@
+{
+ "finding": "bazaar-info-fails-its-own-schema",
+ "measured_at": "2026-08-20T20:33:18Z",
+ "source": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources",
+ "method": {
+  "checker": "missing declared-required keys only; no type, format, enum, oneOf or additionalProperties checks",
+  "why_narrow": "every hit is provable; a clean record is NOT proof of validity, so the count is a floor",
+  "positive_control": "3 catalogued records had each declared-required key deleted from info; the checker flagged 3 of 3"
+ },
+ "totals": {
+  "records": 15155,
+  "records_with_required_in_schema": 14691,
+  "skipped_no_required": 464,
+  "provable_violations": 276,
+  "pct_of_checked": 1.8787,
+  "distinct_hosts": 59,
+  "violating_listings_called_30d": 275,
+  "calls_to_violating_listings_30d": 4856,
+  "unique_payers_on_violating_listings": 494,
+  "all_catalog_calls_30d": 312865
+ },
+ "top_hosts": [
+  {
+   "host": "api.strale.io",
+   "listings": 81
+  },
+  {
+   "host": "readx.sh",
+   "listings": 33
+  },
+  {
+   "host": "findpulse.theaslangroupllc.com",
+   "listings": 13
+  },
+  {
+   "host": "api-v3qhpbwutp.august.services",
+   "listings": 12
+  },
+  {
+   "host": "www.x402scan.com",
+   "listings": 11
+  },
+  {
+   "host": "chronicapulse.theaslangroupllc.com",
+   "listings": 8
+  },
+  {
+   "host": "transitpulse.theaslangroupllc.com",
+   "listings": 7
+  },
+  {
+   "host": "mealpulse.theaslangroupllc.com",
+   "listings": 7
+  },
+  {
+   "host": "collectablespulse.theaslangroupllc.com",
+   "listings": 7
+  },
+  {
+   "host": "grantpulse.theaslangroupllc.com",
+   "listings": 6
+  },
+  {
+   "host": "mart402.com",
+   "listings": 6
+  },
+  {
+   "host": "travelpulse.theaslangroupllc.com",
+   "listings": 5
+  },
+  {
+   "host": "nutripulse.theaslangroupllc.com",
+   "listings": 5
+  },
+  {
+   "host": "fanpulse.theaslangroupllc.com",
+   "listings": 5
+  },
+  {
+   "host": "franchisepulse.theaslangroupllc.com",
+   "listings": 4
+  }
+ ],
+ "top_missing_keys": [
+  {
+   "missing": [
+    "info.output.type"
+   ],
+   "count": 121
+  },
+  {
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "count": 21
+  },
+  {
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "count": 8
+  },
+  {
+   "missing": [
+    "info.input.queryParams.item"
+   ],
+   "count": 7
+  },
+  {
+   "missing": [
+    "info.input.queryParams.product"
+   ],
+   "count": 6
+  },
+  {
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size"
+   ],
+   "count": 5
+  },
+  {
+   "missing": [
+    "info.input.queryParams.city"
+   ],
+   "count": 5
+  },
+  {
+   "missing": [
+    "info.input.queryParams.q"
+   ],
+   "count": 4
+  },
+  {
+   "missing": [
+    "info.input.queryParams.country"
+   ],
+   "count": 4
+  },
+  {
+   "missing": [
+    "info.input.queryParams.state"
+   ],
+   "count": 4
+  },
+  {
+   "missing": [
+    "info.input.queryParams.destination"
+   ],
+   "count": 3
+  },
+  {
+   "missing": [
+    "info.input.queryParams.query"
+   ],
+   "count": 3
+  }
+ ],
+ "violations": [
+  {
+   "resource": "https://api.strale.io/x402/email-validate",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 738,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/merchants",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size",
+    "info.input.queryParams.sort_by"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 580,
+   "l30DaysUniquePayers": 19
+  },
+  {
+   "resource": "https://readx.sh/api/:name/info",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 335,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/google-search",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 317,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/followers",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 223,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/keyword-suggest",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 186,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://stableenrich.dev/api/google-maps/place-details/partial",
+   "host": "stableenrich.dev",
+   "missing": [
+    "info.input.queryParams.placeId",
+    "info.input.queryParams.excludeFields",
+    "info.input.queryParams.languageCode"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 175,
+   "l30DaysUniquePayers": 20
+  },
+  {
+   "resource": "https://api.strale.io/x402/tech-stack-detect",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 164,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/following",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 163,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://readx.sh/api/search/users",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.q"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 122,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/serp-analyze",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 117,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://stableenrich.dev/api/google-maps/place-details/full",
+   "host": "stableenrich.dev",
+   "missing": [
+    "info.input.queryParams.placeId",
+    "info.input.queryParams.excludeFields",
+    "info.input.queryParams.languageCode"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 96,
+   "l30DaysUniquePayers": 17
+  },
+  {
+   "resource": "https://api.strale.io/x402/email-deliverability-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 90,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/resources",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 82,
+   "l30DaysUniquePayers": 16
+  },
+  {
+   "resource": "https://api.strale.io/x402/startup-domain-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 77,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://x402factory.ai/base/coinprice",
+   "host": "x402factory.ai",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 65,
+   "l30DaysUniquePayers": 9
+  },
+  {
+   "resource": "https://x402.twit.sh/tweets/mediaUpload",
+   "host": "x402.twit.sh",
+   "missing": [
+    "info.input.queryParams.auth_token",
+    "info.input.queryParams.ct0",
+    "info.input.queryParams.file"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 43,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/followers_web",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 42,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/search/tweets",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.q"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 40,
+   "l30DaysUniquePayers": 6
+  },
+  {
+   "resource": "https://api.strale.io/x402/barcode-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 40,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/brand-mention-search",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 39,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/registry/origin",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size",
+    "info.input.queryParams.url"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 38,
+   "l30DaysUniquePayers": 12
+  },
+  {
+   "resource": "https://api.strale.io/x402/url-to-text",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 36,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/translate",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 35,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/uptime-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 34,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/github-repo-analyze",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 32,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/url-to-markdown",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 30,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/resources/search",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size",
+    "info.input.queryParams.q"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 29,
+   "l30DaysUniquePayers": 13
+  },
+  {
+   "resource": "https://api.strale.io/x402/image-to-text",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 20,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/uk-company-data",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 20,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/backlink-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 20,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/recall",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.product"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 19,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/pricing-page-extract",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 18,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/seo-audit",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 18,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/following_web",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 17,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/fear-greed-index",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 17,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://readx.sh/api/search",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.q"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 16,
+   "l30DaysUniquePayers": 8
+  },
+  {
+   "resource": "https://api.slamai.dev/chain/tokens/trending",
+   "host": "api.slamai.dev",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 16,
+   "l30DaysUniquePayers": 6
+  },
+  {
+   "resource": "https://readx.sh/api/:name",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 14,
+   "l30DaysUniquePayers": 4
+  },
+  {
+   "resource": "https://api.strale.io/x402/wallet-transactions-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 14,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://readx.sh/api/:name/verified_followers",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 11,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/facilitators",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 11,
+   "l30DaysUniquePayers": 9
+  },
+  {
+   "resource": "https://readx.sh/api/articles/:id",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 11,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://stableenrich.dev/api/google-maps/solar/building-insights",
+   "host": "stableenrich.dev",
+   "missing": [
+    "info.input.queryParams.latitude",
+    "info.input.queryParams.longitude",
+    "info.input.queryParams.requiredQuality"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 11,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/domain-reputation",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 11,
+   "l30DaysUniquePayers": 4
+  },
+  {
+   "resource": "https://api.strale.io/x402/screenshot-url",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 11,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/lists/:id",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 9,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://cnvrt.ing/api/analyze-image",
+   "host": "cnvrt.ing",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 9,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/phone-validate",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 9,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/whois-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 9,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/tweets/:id",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name",
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 8,
+   "l30DaysUniquePayers": 4
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/buy-check",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.product"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 8,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/exchange-rate",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 8,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/address-geocode",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 8,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/about",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 7,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://agentsonly.vip/mint",
+   "host": "agentsonly.vip",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 7,
+   "l30DaysUniquePayers": 4
+  },
+  {
+   "resource": "https://rubric-protocol.com/v1/x402/tiered-attest",
+   "host": "rubric-protocol.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 7,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/alternative",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.product"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 7,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/job-board-search",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 7,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/wallet-balance-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 7,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/us-company-data",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 7,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/sitemap-parse",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 7,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/profile",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://readx.sh/api/tweets/:id",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://readx.sh/api/:name/with_media",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://readx.sh/api/tweets/:id/replies",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.proxyllm.ai/x402/llm-cost-scout",
+   "host": "api.proxyllm.ai",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/product",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.use_case"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/used",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.product"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/ssl-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/origins/:id/resources",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/dns-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 6,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/affiliates",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 5,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://app.aabc.app/api/base-agent-report",
+   "host": "app.aabc.app",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 5,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/buy-check-lite",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.product"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 5,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/wallet-age-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 5,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/token-security-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 5,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/german-company-data",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 5,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/product-reviews-extract",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 5,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/tools/get_user_id",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.username"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://readx.sh/api/:name/tweets/:id/history",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name",
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/tweets/:id/retweeters",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/pinned",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://error404.life/toll/402/",
+   "host": "error404.life",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/buyers",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size",
+    "info.input.queryParams.sort_by"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/price-compare",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/holiday-calendar",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/sanctions-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/stock-quote",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/header-security-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mart402.com/v1/verify",
+   "host": "mart402.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://x721.dev/roadmap",
+   "host": "x721.dev",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 4,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://readx.sh/api/tools/get_username",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.user_id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/hashtag/:hash",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.tag"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/mentions",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/with_replies",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://giftpulse.theaslangroupllc.com/api/topup/lookup",
+   "host": "giftpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.phone"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/broadcasts/:id",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/lists/:id/members",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://x402factory.ai/base/xprofile",
+   "host": "x402factory.ai",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://ledgerproofhq.io/api/lain/confidence",
+   "host": "ledgerproofhq.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://onchainpulse.theaslangroupllc.com/api/iso-receipt",
+   "host": "onchainpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.tx"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/weather-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/merchants/:address/transactions",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size",
+    "info.input.queryParams.sort_by",
+    "info.input.queryParams.sort_order"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api-production-54bd.up.railway.app/v1/macro-calendar",
+   "host": "api-production-54bd.up.railway.app",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 3
+  },
+  {
+   "resource": "https://api.strale.io/x402/npm-package-info",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/swedish-company-data",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/job-posting-analyze",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/redirect-trace",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/social-profile-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://test.alexwlex143.workers.dev/x402/nft-mint/api/verify-and-mint",
+   "host": "test.alexwlex143.workers.dev",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/web-extract",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/eth-address-validate",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://x402-echo-service.fly.dev/api/echo",
+   "host": "x402-echo-service.fly.dev",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://stockwaves.net/api/macro/indicator",
+   "host": "stockwaves.net",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 3,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://fitpulse.theaslangroupllc.com/api/fit/race",
+   "host": "fitpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.race_type",
+    "info.input.queryParams.race_date"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://travelpulse.theaslangroupllc.com/api/travel/translate",
+   "host": "travelpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.text",
+    "info.input.queryParams.to"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://travelpulse.theaslangroupllc.com/api/travel/phrasebook",
+   "host": "travelpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.language"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.slamai.dev/token/price",
+   "host": "api.slamai.dev",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/markdown",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/extract",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://trust-agent.onrender.com/v1/verify/quick",
+   "host": "trust-agent.onrender.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://franchisepulse.theaslangroupllc.com/api/franchise/compare",
+   "host": "franchisepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.concepts"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://edupulse.theaslangroupllc.com/api/study/misconception",
+   "host": "edupulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.question",
+    "info.input.queryParams.answer"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://travelpulse.theaslangroupllc.com/api/travel/insurance",
+   "host": "travelpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.destination"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://travelpulse.theaslangroupllc.com/api/travel/weather",
+   "host": "travelpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.destination"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://travelpulse.theaslangroupllc.com/api/travel/deals",
+   "host": "travelpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.destination"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://transitpulse.theaslangroupllc.com/api/transit/coverage",
+   "host": "transitpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.city"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://transitpulse.theaslangroupllc.com/api/transit/visitor",
+   "host": "transitpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.city"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://transitpulse.theaslangroupllc.com/api/transit/multimodal",
+   "host": "transitpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.from",
+    "info.input.queryParams.to"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://transitpulse.theaslangroupllc.com/api/transit/trip",
+   "host": "transitpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.from",
+    "info.input.queryParams.to"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://transitpulse.theaslangroupllc.com/api/transit/delays-history",
+   "host": "transitpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.city"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://transitpulse.theaslangroupllc.com/api/transit/delays",
+   "host": "transitpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.city"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://transitpulse.theaslangroupllc.com/api/transit/agencies",
+   "host": "transitpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.city"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://tradepulse.theaslangroupllc.com/api/trade/landed",
+   "host": "tradepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.from_country",
+    "info.input.queryParams.to_country"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://tradepulse.theaslangroupllc.com/api/trade/fta",
+   "host": "tradepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.from_country",
+    "info.input.queryParams.to_country"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://safepulse.theaslangroupllc.com/api/safe/score",
+   "host": "safepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.brand"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://safepulse.theaslangroupllc.com/api/safe/food",
+   "host": "safepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.product"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://safepulse.theaslangroupllc.com/api/safe/vehicle",
+   "host": "safepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.make",
+    "info.input.queryParams.model",
+    "info.input.queryParams.year"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://riskpulse.theaslangroupllc.com/api/risk/business",
+   "host": "riskpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.country"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://remittancepulse.theaslangroupllc.com/api/remit/compliance",
+   "host": "remittancepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.from"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://remittancepulse.theaslangroupllc.com/api/remit/receive",
+   "host": "remittancepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.country"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://patentpulse.theaslangroupllc.com/api/patent/sep",
+   "host": "patentpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.standard"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://patentpulse.theaslangroupllc.com/api/patent/prior-art",
+   "host": "patentpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.invention"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://nutripulse.theaslangroupllc.com/api/nutrition/analyze",
+   "host": "nutripulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.meal"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://nutripulse.theaslangroupllc.com/api/nutrition/stack",
+   "host": "nutripulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.goal"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://nutripulse.theaslangroupllc.com/api/nutrition/research",
+   "host": "nutripulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.topic"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://nutripulse.theaslangroupllc.com/api/nutrition/supplement",
+   "host": "nutripulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://nutripulse.theaslangroupllc.com/api/nutrition/food",
+   "host": "nutripulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.query"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mealpulse.theaslangroupllc.com/api/meal/substitute",
+   "host": "mealpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.ingredient"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mealpulse.theaslangroupllc.com/api/meal/leftover",
+   "host": "mealpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.leftovers"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mealpulse.theaslangroupllc.com/api/meal/dietary",
+   "host": "mealpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.dietary"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mealpulse.theaslangroupllc.com/api/meal/batch",
+   "host": "mealpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.meals"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mealpulse.theaslangroupllc.com/api/meal/pantry",
+   "host": "mealpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.ingredients"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mealpulse.theaslangroupllc.com/api/meal/recipe",
+   "host": "mealpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.dish"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mealpulse.theaslangroupllc.com/api/meal/grocery",
+   "host": "mealpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.meals"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://herbapulse.theaslangroupllc.com/api/herba/tradition",
+   "host": "herbapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.tradition"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://herbapulse.theaslangroupllc.com/api/herba/interaction",
+   "host": "herbapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.herb"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://herbapulse.theaslangroupllc.com/api/herba/remedy",
+   "host": "herbapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.condition"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://herbapulse.theaslangroupllc.com/api/herba/herb",
+   "host": "herbapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.herb"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://harvestpulse.theaslangroupllc.com/api/harvest/organic",
+   "host": "harvestpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.state"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://gridpulse.theaslangroupllc.com/api/energy/community-solar",
+   "host": "gridpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.state"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://gridpulse.theaslangroupllc.com/api/energy/forecast",
+   "host": "gridpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.state"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://grantpulse.theaslangroupllc.com/api/grant/writer",
+   "host": "grantpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.section",
+    "info.input.queryParams.org_type",
+    "info.input.queryParams.mission"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://grantpulse.theaslangroupllc.com/api/grant/foundation",
+   "host": "grantpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.mission"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://grantpulse.theaslangroupllc.com/api/grant/eligibility",
+   "host": "grantpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.grant_name",
+    "info.input.queryParams.org_type"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://grantpulse.theaslangroupllc.com/api/grant/apply",
+   "host": "grantpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.grant_name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://grantpulse.theaslangroupllc.com/api/grant/state",
+   "host": "grantpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.state"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://grantpulse.theaslangroupllc.com/api/grant/federal",
+   "host": "grantpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.keyword"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://gamepulse.theaslangroupllc.com/api/gaming/meta",
+   "host": "gamepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.game"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://franchisepulse.theaslangroupllc.com/api/franchise/total-cost",
+   "host": "franchisepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.franchisor"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://franchisepulse.theaslangroupllc.com/api/franchise/vet",
+   "host": "franchisepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.franchisor"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://franchisepulse.theaslangroupllc.com/api/franchise/fdd",
+   "host": "franchisepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.franchisor"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/gift",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.recipient"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/ethical",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.product_or_category"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/rental",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.item"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/grant",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.category"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/local",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.service"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/hidden",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.category"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://findpulse.theaslangroupllc.com/api/find/compare",
+   "host": "findpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.products"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://fanpulse.theaslangroupllc.com/api/fan/timeline",
+   "host": "fanpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.franchise"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://fanpulse.theaslangroupllc.com/api/fan/sorting",
+   "host": "fanpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.franchise"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://fanpulse.theaslangroupllc.com/api/fan/discography",
+   "host": "fanpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.artist"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://fanpulse.theaslangroupllc.com/api/fan/lore",
+   "host": "fanpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.franchise",
+    "info.input.queryParams.query"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://fanpulse.theaslangroupllc.com/api/fan/character",
+   "host": "fanpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.franchise",
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://dealpulse.theaslangroupllc.com/api/deals/history",
+   "host": "dealpulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.query"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://compliancepulse.theaslangroupllc.com/api/comply/esg",
+   "host": "compliancepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.country"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://compliancepulse.theaslangroupllc.com/api/comply/employment",
+   "host": "compliancepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.country"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://compliancepulse.theaslangroupllc.com/api/comply/sector",
+   "host": "compliancepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.sector"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://collectablespulse.theaslangroupllc.com/api/collect/insurance",
+   "host": "collectablespulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.item"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://collectablespulse.theaslangroupllc.com/api/collect/storage",
+   "host": "collectablespulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.item"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://collectablespulse.theaslangroupllc.com/api/collect/sell",
+   "host": "collectablespulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.item"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://collectablespulse.theaslangroupllc.com/api/collect/authenticate",
+   "host": "collectablespulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.item"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://collectablespulse.theaslangroupllc.com/api/collect/compare",
+   "host": "collectablespulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.item1",
+    "info.input.queryParams.item2"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://collectablespulse.theaslangroupllc.com/api/collect/invest",
+   "host": "collectablespulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.item"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://collectablespulse.theaslangroupllc.com/api/collect/grade",
+   "host": "collectablespulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.item"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://clearcarepulse.theaslangroupllc.com/api/care/negotiate",
+   "host": "clearcarepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.procedure"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://clearcarepulse.theaslangroupllc.com/api/care/oop",
+   "host": "clearcarepulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.procedure"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://chronicapulse.theaslangroupllc.com/api/chronica/timeline",
+   "host": "chronicapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.subject"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://chronicapulse.theaslangroupllc.com/api/chronica/military",
+   "host": "chronicapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://chronicapulse.theaslangroupllc.com/api/chronica/business",
+   "host": "chronicapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.business"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://chronicapulse.theaslangroupllc.com/api/chronica/place",
+   "host": "chronicapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.place"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://chronicapulse.theaslangroupllc.com/api/chronica/person",
+   "host": "chronicapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://chronicapulse.theaslangroupllc.com/api/chronica/search",
+   "host": "chronicapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.q"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://chronicapulse.theaslangroupllc.com/api/chronica/obituary",
+   "host": "chronicapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://chronicapulse.theaslangroupllc.com/api/chronica/event",
+   "host": "chronicapulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.event"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://biopulse.theaslangroupllc.com/api/bio/invasive",
+   "host": "biopulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.region"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://biopulse.theaslangroupllc.com/api/bio/endangered",
+   "host": "biopulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.species"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://biopulse.theaslangroupllc.com/api/bio/species",
+   "host": "biopulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.species"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://autopulse.theaslangroupllc.com/api/auto/inspect",
+   "host": "autopulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.make",
+    "info.input.queryParams.model"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://autopulse.theaslangroupllc.com/api/auto/negotiate",
+   "host": "autopulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.make",
+    "info.input.queryParams.model"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://autopulse.theaslangroupllc.com/api/auto/problems",
+   "host": "autopulse.theaslangroupllc.com",
+   "missing": [
+    "info.input.queryParams.year",
+    "info.input.queryParams.make",
+    "info.input.queryParams.model"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/base64-encode-url",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/container-track",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/cve-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/timezone-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/postal-code-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/email-draft",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/github-user-profile",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/wallets/:address/transactions",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size",
+    "info.input.queryParams.sort_by",
+    "info.input.queryParams.sort_order"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 2
+  },
+  {
+   "resource": "https://api.strale.io/x402/company-enrich",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/company-tech-stack",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/iban-validate",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/business-day-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/phone-type-detect",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://stableninja.dev/api/amazon/search",
+   "host": "stableninja.dev",
+   "missing": [
+    "info.input.queryParams.query"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mart402.com/v1/ocr",
+   "host": "mart402.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mart402.com/v1/extract",
+   "host": "mart402.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 2,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/lists/:id/timeline",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/tools/get_usernames",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.user_ids"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/tools/get_user_ids",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.usernames"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://readx.sh/api/:name/follower_web",
+   "host": "readx.sh",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://ccs-seller.bbrysonelite.workers.dev/v1/lookup/lei/00EHHQ2ZHDCFXJCPCL46",
+   "host": "ccs-seller.bbrysonelite.workers.dev",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://ccs-seller.bbrysonelite.workers.dev/v1/lookup/naics/513210",
+   "host": "ccs-seller.bbrysonelite.workers.dev",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://ccs-seller.bbrysonelite.workers.dev/v1/lookup/naics/722513",
+   "host": "ccs-seller.bbrysonelite.workers.dev",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://gifu-server.onrender.com/api/x402/search/random",
+   "host": "gifu-server.onrender.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/site-audit",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/domain-audit",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/evidence",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/summarize",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/redact",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/translate",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/pdf-extract",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/table",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/classify",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api-v3qhpbwutp.august.services/v1/web-extract",
+   "host": "api-v3qhpbwutp.august.services",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://stableproduct.dev/api/wirecutter/reviews",
+   "host": "stableproduct.dev",
+   "missing": [
+    "info.input.queryParams.recommendation_only",
+    "info.input.queryParams.include_scoop",
+    "info.input.queryParams.limit",
+    "info.input.queryParams.offset"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/pep-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/stablecoin-flow-check",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/vat-validate",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/unit-convert",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/jwt-decode",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/lei-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/pypi-package-info",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/password-strength",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/company-id-detect",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/credit-score-band",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/currency-convert",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/robots-txt-parse",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/french-company-data",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/meta-extract",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/eu-trademark-search",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/invoice-validate",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/link-extract",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/beneficial-ownership-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://api.strale.io/x402/mx-lookup",
+   "host": "api.strale.io",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://licenses.recordsforagents.com/licenses/verify",
+   "host": "licenses.recordsforagents.com",
+   "missing": [
+    "info.input.queryParams.name"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/origins/blockrun.ai/resources",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://www.x402scan.com/api/x402/origins/%7Bid%7D/resources",
+   "host": "www.x402scan.com",
+   "missing": [
+    "info.input.queryParams.page",
+    "info.input.queryParams.page_size"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://agents-only-production.up.railway.app/mint",
+   "host": "agents-only-production.up.railway.app",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mart402.com/v1/enrich",
+   "host": "mart402.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mart402.com/v1/jp-company",
+   "host": "mart402.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://mart402.com/v1/structured",
+   "host": "mart402.com",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://recoup-qgrbqflbo-recoupable-ad724970.vercel.app/api/image/generate",
+   "host": "recoup-qgrbqflbo-recoupable-ad724970.vercel.app",
+   "missing": [
+    "info.output.type"
+   ],
+   "x402Version": 1,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://openwebninja-x402.vercel.app/api/yelp/business-search",
+   "host": "openwebninja-x402.vercel.app",
+   "missing": [
+    "info.input.queryParams.query",
+    "info.input.queryParams.location"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 1,
+   "l30DaysUniquePayers": 1
+  },
+  {
+   "resource": "https://wintel.canopy.finance/x402/v1/report/stock/AAPL",
+   "host": "wintel.canopy.finance",
+   "missing": [
+    "info.input.pathParams.asset_type",
+    "info.input.pathParams.asset_id"
+   ],
+   "x402Version": 2,
+   "l30DaysTotalCalls": 0,
+   "l30DaysUniquePayers": 0
+  }
+ ]
+}
