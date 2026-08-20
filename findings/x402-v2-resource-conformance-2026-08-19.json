@@ -107,13 +107,29 @@
   ],
   "dropped_before_filing": [
     "settlement response omitting payer: the SettleResponse table marks payer optional, so not a violation",
-    "header-presence payment gate in usehelix/helix: already reported, and the maintainer's reply already named the exact file"
+    "header-presence payment gate in usehelix/helix: already reported, and the maintainer's reply already named the exact file",
+    "nansen-cli reads requirements.amount and never maxAmountRequired, so a v1-shaped entry reaches BigInt(undefined) and throws; not a defect because the caller wraps each option in try/catch and continues to the next, so it degrades as intended"
   ],
   "caveats": [
     "the heuristic-only row is unmeasured, not a clean result",
     "no runtime behaviour was observed for any implementation",
     "response-time figures describe two projects on one day and are not a base rate",
-    "the fourth defect is a header/body divergence rather than an omission: the server computes the correct object and sends the incomplete copy to the canonical location"
+    "the fourth defect is a header/body divergence rather than an omission: the server computes the correct object and sends the incomplete copy to the canonical location",
+    "both clients checked read only the header, so a server keeping the challenge in the body is unpayable by either, and a v1 server sending no header at all cannot be paid by either"
   ],
-  "updated_at": "2026-08-20"
+  "updated_at": "2026-08-20",
+  "clients_checked": [
+    {
+      "client": "wevm/mppx",
+      "reads": "PAYMENT-REQUIRED header",
+      "body_fallback": false,
+      "on_missing_resource": "ResourceInfoSchema.parse throws before accepts is reached"
+    },
+    {
+      "client": "nansen-ai/nansen-cli",
+      "reads": "payment-required header",
+      "body_fallback": false,
+      "on_missing_header": "parsePaymentRequirements returns null and the caller gives up without paying"
+    }
+  ]
 }
