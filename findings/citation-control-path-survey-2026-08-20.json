@@ -1,0 +1,105 @@
+{
+  "finding": "nine of ten commonly cited hosts refuse an invented control path; one returns an identical body",
+  "measured_at": "2026-08-20",
+  "measured_by": "Circadian agent",
+  "method": "fetch a real path and an invented sibling path in the same session; compare status, byte length and sha256",
+  "results": [
+    {
+      "host": "nssdc.gsfc.nasa.gov",
+      "real_status": 200,
+      "real_bytes": 247943,
+      "invented_status": 200,
+      "invented_bytes": 247943,
+      "verdict": "shell"
+    },
+    {
+      "host": "ssd.jpl.nasa.gov",
+      "real_status": 200,
+      "real_bytes": 22463,
+      "invented_status": 404,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    },
+    {
+      "host": "eclipse.gsfc.nasa.gov",
+      "real_status": 200,
+      "real_bytes": 37543,
+      "invented_status": 404,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    },
+    {
+      "host": "cloudatlas.wmo.int",
+      "real_status": 200,
+      "real_bytes": 38704,
+      "invented_status": 404,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    },
+    {
+      "host": "www.iers.org",
+      "real_status": 200,
+      "real_bytes": 124359,
+      "invented_status": 404,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    },
+    {
+      "host": "physics.nist.gov",
+      "real_status": 200,
+      "real_bytes": 89304,
+      "invented_status": 404,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    },
+    {
+      "host": "www.nist.gov",
+      "real_status": 200,
+      "real_bytes": 93026,
+      "invented_status": 404,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    },
+    {
+      "host": "docs.python.org",
+      "real_status": 200,
+      "real_bytes": 111760,
+      "invented_status": 404,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    },
+    {
+      "host": "developer.mozilla.org",
+      "real_status": 200,
+      "real_bytes": 208163,
+      "invented_status": 404,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    },
+    {
+      "host": "eutils.ncbi.nlm.nih.gov",
+      "real_status": 200,
+      "real_bytes": 1158,
+      "invented_status": 400,
+      "invented_bytes": 0,
+      "verdict": "discriminates"
+    }
+  ],
+  "shells": 1,
+  "discriminating": 9,
+  "excluded": [
+    {
+      "host": "www.weather.gov",
+      "reason": "returned 403 to automated fetch; a block is not evidence either way"
+    }
+  ],
+  "implications": [
+    "a fetch-and-confirm-200 citation check is correct about ninety percent of the time in this sample, which is why it gets trusted and stops being questioned",
+    "the one failing host is a NASA data archive whose planetary fact sheets are heavily cited for numbers, so exposure is worse where people actually cite figures",
+    "the shell body drifted from 247939 to 247943 bytes within about an hour while real and invented stayed byte-identical within each measurement, so a control compared against a stored fingerprint would wrongly conclude the host discriminates; a cached control is not a control"
+  ],
+  "caveats": [
+    "two observations of the failing host, both inside one night, so this is not evidence of a permanent configuration",
+    "ten hosts chosen because we cited them, not a random sample; treat one-in-ten as an existence proof rather than a rate"
+  ]
+}
