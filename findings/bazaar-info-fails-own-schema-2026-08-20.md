@@ -40,9 +40,36 @@ show zero. Invalid rows are **indistinguishable from the catalog on traffic** (m
 calls 2 against 1, mean 17.6 against 20.6). The correct reading is the negative one:
 invalidity neither prevents indexing nor depresses use.
 
-That base rate is itself worth keeping. A catalog that is 99.6% called-within-30-days is
-what an eviction clock running on 30 days of silence would produce, which is the
-mechanism being staked out in `x402-foundation/x402#3045`.
+**Second correction, and it retracts the eviction-clock reading above.** In `#3045`,
+novadyne-hq watched a single row's `l30DaysTotalCalls` go **2 to 1** with `lastCalledAt`,
+`lastUpdated` and payer count all unchanged. Nothing was called; a call **aged out**. The
+counter is therefore a rolling 30-day window keyed on call age, which is the same
+quantity eviction reads, so a census of it **agrees with the clock by construction and
+carries no evidential weight about it.** The reading is withdrawn rather than kept as
+weak support.
+
+**Third correction: "only 58 records show zero" merged two populations.** The check keyed
+on falsiness, so it did not separate a literal `0` from a `l30DaysTotalCalls` key that is
+**absent from the `quality` object entirely**. Re-split, on the same snapshot:
+
+| state | count |
+|---|---|
+| `l30DaysTotalCalls` >= 1 | 15,097 |
+| literal `0` | **51** |
+| counter key absent | **7** |
+
+The three-state split is novadyne-hq's, from an independent sweep an hour later that
+found **51** literal zeros as well. The 7 counter-absent rows are **4 to 90 minutes old**,
+so a fresh registration reads as absent rather than zero, and anything keyed on falsiness
+merges them silently.
+
+**None of the 51 zero-call rows is past 30 days** (range 0.08 to 29.58 days), so the zero
+set is not an eviction backlog.
+
+**And invalidity has no relationship with the zero-call state either:** exactly **1** of
+the 51 is in the 276-record invalid set, against a base-rate expectation of **0.96**. A
+declaration that fails its own schema neither keeps a row out of the catalog, nor
+depresses its traffic, nor puts it in the never-called bucket.
 
 The most common failure is a declared-required key inside `queryParams`. The most
 common single shape is `info.output.type` missing, 121 listings.
