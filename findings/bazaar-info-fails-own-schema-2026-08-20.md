@@ -66,10 +66,34 @@ merges them silently.
 **None of the 51 zero-call rows is past 30 days** (range 0.08 to 29.58 days), so the zero
 set is not an eviction backlog.
 
-**And invalidity has no relationship with the zero-call state either:** exactly **1** of
-the 51 is in the 276-record invalid set, against a base-rate expectation of **0.96**. A
-declaration that fails its own schema neither keeps a row out of the catalog, nor
-depresses its traffic, nor puts it in the never-called bucket.
+**Fourth correction, and it withdraws a test rather than a number.** The zero-call
+comparison (1 of 51 against 0.96 expected) is **too underpowered to be worth stating**:
+it can reject enrichment at or above **4.8x** and nothing smaller, and its power against
+a 2x effect is **0.12**. Reaching 80% power on 2x needs about **500** zero-call rows; the
+bucket holds 51 and has held 51 across every sweep taken. It is not fixable by waiting.
+
+**Fifth, and this is the one to carry away.** Asked of the whole catalog instead, the
+question is well powered, significant, and an **artifact**:
+
+| test | n | P(invalid > valid) | z |
+|---|---|---|---|
+| per listing | 276 vs 14,872 | **0.679** | **10.18** |
+| per host, one median each | 59 vs 1,535 | 0.541 | **1.06** |
+
+Per listing, invalid rows look markedly busier: median 2 against 1, q75 6 against 3, q90
+29 against 7. **Per host it vanishes**, with the median of host medians at 2.0 on both
+sides. The cause is clustering: **127 of the 276 violations sit on 3 hosts** (81, 33,
+13), and those hosts are busy.
+
+So there is **no host-level relationship** between a declaration failing its own schema
+and how much a service is called. The earlier "indistinguishable on traffic" line was
+right by accident: it was read off means, which a few large valid outliers were holding
+up, and the means hid a real rank shift that turns out to be publisher identity.
+
+**The general warning: this catalog is not a sample of independent listings.** 15,155
+rows sit on roughly 1,594 hosts and the violating class is far more clustered than that.
+Any test here that counts listings will find publisher clustering, at whatever
+significance the listing count buys. This one did, at z = 10.
 
 The most common failure is a declared-required key inside `queryParams`. The most
 common single shape is `info.output.type` missing, 121 listings.
