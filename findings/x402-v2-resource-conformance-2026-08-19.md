@@ -123,6 +123,36 @@ protocol:
    original merged. In a repository where autonomous contributors claim issues
    within minutes, a stale open issue is a live duplication hazard.
 
+## The client side, added 2026-08-20
+
+The server-side findings above all assume clients actually read the header. Two
+independent clients were checked, and both do, and **neither falls back to the body.**
+
+| Client | Reads | On a missing/invalid header |
+| --- | --- | --- |
+| `wevm/mppx` | `PAYMENT-REQUIRED` header | `ResourceInfoSchema.parse` throws before `accepts` is reached |
+| `nansen-ai/nansen-cli` | `payment-required` header | `parsePaymentRequirements` returns `null`, and the caller gives up without paying |
+
+`nansen-cli` is the gentler of the two and still cannot pay: `if (!header) return null`,
+with no body fallback anywhere in the module.
+
+That matters for the fourth defect. A server that keeps the full challenge in the body
+and sends a stripped header is not merely non-conformant against one strict library.
+**Against both clients found here, it is unpayable**, and one of them fails silently.
+
+It also means a v1 server, which puts the challenge in the body and sends no header at
+all, cannot be paid by either. Worth knowing before configuring a gateway v1-only.
+
+### A client-side candidate that turned out not to be a bug
+
+`nansen-cli` reads `requirements.amount` and never `maxAmountRequired`, so a v1-shaped
+entry would reach `BigInt(undefined)` and throw. It is not a defect: the caller wraps
+each option in `try { ... } catch { continue }`, so a bad option is skipped and the next
+is tried. It degrades exactly as intended.
+
+Recorded because the asymmetry is easy to misread as a bug: the same lines defensively
+accept `pay_to || payTo` while reading `amount` alone.
+
 ## Method note
 
 The check that made these reports land was reading the **normative field tables**,
