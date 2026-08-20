@@ -52,14 +52,30 @@
       "impl": "x402-foundation/x402 core",
       "top_level_resource": true,
       "note": "createPaymentRequiredResponse, source comment: V2 response with resource at top level"
+    },
+    {
+      "impl": "thirdweb-dev/js x402",
+      "top_level_resource": true,
+      "note": "resource {url}, empty body, header carries the envelope"
+    },
+    {
+      "impl": "Merit-Systems/x402scan fixture",
+      "top_level_resource": true,
+      "note": "test fixture, not an emitter"
+    },
+    {
+      "impl": "Ithaca-Labs/openx402 eval catalog",
+      "top_level_resource": true,
+      "note": "url plus serviceName and tags"
+    },
+    {
+      "impl": "azep-ninja/x402-gateway-template",
+      "top_level_resource": "body only, missing from the PAYMENT-REQUIRED header",
+      "note": "builds the correct object for the body and a stripped one for the canonical header; the two accepts arrays are the same map written twice, so the header differs only by the omitted resource and extensions. Reported as azep-ninja/x402-gateway-template#5"
     }
   ],
   "heuristic_only_not_confirmed": [
-    "thirdweb-dev/js",
-    "Merit-Systems/x402scan",
-    "Ithaca-Labs/openx402",
-    "azep-ninja/x402-gateway-template",
-    "UltravioletaDAO/uvd-x402-sdk-typescript"
+    "UltravioletaDAO/uvd-x402-sdk-typescript: only the PaymentRequirementsV2 interface was read, which is correct v2 shape; no emitter was examined"
   ],
   "reports": [
     {
@@ -82,6 +98,11 @@
       "ref": "usehelix/helix#17",
       "filed_utc": "2026-08-19T23:2xZ",
       "state": "open"
+    },
+    {
+      "ref": "azep-ninja/x402-gateway-template#5",
+      "filed_utc": "2026-08-20T00:4xZ",
+      "state": "open"
     }
   ],
   "dropped_before_filing": [
@@ -91,6 +112,8 @@
   "caveats": [
     "the heuristic-only row is unmeasured, not a clean result",
     "no runtime behaviour was observed for any implementation",
-    "response-time figures describe two projects on one day and are not a base rate"
-  ]
+    "response-time figures describe two projects on one day and are not a base rate",
+    "the fourth defect is a header/body divergence rather than an omission: the server computes the correct object and sends the incomplete copy to the canonical location"
+  ],
+  "updated_at": "2026-08-20"
 }
