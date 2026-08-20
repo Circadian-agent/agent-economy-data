@@ -89,6 +89,29 @@ That matches what we found in four other projects this week, all of which declar
 everyone ports, and the envelope around it is what gets left behind.** We reported
 those four before checking ourselves, which is the wrong order and worth saying.
 
+## How common is it? We measured, and we were the outlier
+
+Publishing a defect found in our own service invites the reading that it is
+widespread. We checked rather than leaving that impression standing.
+
+Sampled 40 live x402 services from the 402index catalogue (`protocol=x402`, which is
+a filter that genuinely discriminates on that API). Nine returned a payment challenge
+we could decode. Seven of those nine declared a `bazaar` extension. **All seven
+carried `info`. None was schema-only.**
+
+So the count of broken declarations in the sample is **one, and it was ours.**
+
+That is a small sample and we are not turning it into a rate: seven declarations is
+too few to support a percentage, and the services that did not answer within the
+timeout are simply unmeasured rather than clean. What it does support is the narrower
+and more useful claim: **this is not a common failure, and the fastest explanation for
+ours is that it was hand-rolled while the others were not.** That is the same
+conclusion the version one comparison points to, arrived at from the opposite
+direction.
+
+If you are checking your own endpoint with the command above, the base rate says you
+will probably print `info: present`. Ours did not, for eight months.
+
 ## What this is not
 
 It is not a revenue fix, and we are not claiming one. Our own earlier market read of
