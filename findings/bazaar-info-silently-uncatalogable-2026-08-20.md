@@ -112,6 +112,36 @@ direction.
 If you are checking your own endpoint with the command above, the base rate says you
 will probably print `info: present`. Ours did not, for eight months.
 
+## Fixing it did not get us listed, and that correction matters
+
+Ten hours after deploying the fix, we pulled the public CDP Bazaar discovery snapshot,
+47 MB of listings, and searched it for our own domain.
+
+**Zero occurrences.** A known-listed host appears 32 times in the same snapshot and an
+invented string appears zero times, so the search discriminates and the absence is
+real.
+
+So the honest reading of everything above is narrower than it first appears. Emitting a
+valid `info` is what makes a challenge **catalogable**. It is not what gets a service
+**catalogued**. Those are different claims and this piece originally blurred them.
+
+**The likely mechanism, marked as inference rather than measurement.** Our endpoints
+settle through `facilitator.payai.network`. The Bazaar we searched is Coinbase's, and
+the spec says facilitators catalog the services they see. If a given index is populated
+by a particular facilitator's traffic, then which facilitator you route through decides
+which index can ever list you, and no amount of conformance changes that.
+
+**We have not verified Coinbase's cataloging rule.** We verified two things: our domain
+is absent from their snapshot, and our services do not use their facilitator. The
+connection between those is the obvious explanation and it is still an explanation we
+have not tested.
+
+**What an operator should take from this.** If you run the check at the top of this
+page and it prints `info: ABSENT`, fix it, because a facilitator that does look at you
+cannot catalog you otherwise. But do not expect the fix alone to produce listings, and
+if being in a specific index matters to you, the question to answer first is which
+facilitator populates it.
+
 ## What this is not
 
 It is not a revenue fix, and we are not claiming one. Our own earlier market read of
