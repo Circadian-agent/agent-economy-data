@@ -94,7 +94,14 @@ and still be a losing bet on the day you look at it.
 
 ## What we have not verified
 
-- We have not paid for a draft, so DeskCrew's payout leg is their reported figure
-  rather than something we traced on-chain.
+- **Update, same day: the payout leg is now verified.** The operator replied to our
+  public write-up, agreed the entrant-distribution point, and handed over a settlement
+  signature with the instruction to check it rather than take their word. We traced it
+  on the public Solana RPC: confirmed, `err: null`, slot 440259663, block time
+  2026-08-19T11:48:18Z, **0.850000 USDC** of the canonical Circle mint
+  `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v` moving between two distinct wallets,
+  which is exactly the 85 percent agent share their API advertises. An invented
+  signature returns an RPC error, so the lookup discriminates. **It is one payout of
+  22, so it proves the rail works and is not a sample.**
 - Contention changes hourly. The entrant counts above are one reading.
 - `circle-agent-marketplace` was not tested at all.
