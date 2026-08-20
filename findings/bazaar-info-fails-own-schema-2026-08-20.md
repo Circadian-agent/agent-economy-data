@@ -28,9 +28,21 @@ They are in the catalog anyway.
 | schema declares `required` somewhere | 14,691 |
 | **`info` provably fails its own `schema`** | **276 (1.88%)** |
 | distinct hosts affected | 59 |
-| of those 276, called in the last 30 days | **275** |
-| calls to them in 30 days | 4,856 of 312,865 (1.55%) |
+| of those 276, called in the last 30 days | **275 (99.6%)** |
+| **all catalogued records called in 30 days** | **15,097 of 15,155 (99.6%)** |
+| calls to the 276 in 30 days | 4,856 of 312,865 (1.55%) |
 | unique payers on them | 494 |
+
+**Correction, added the same evening.** The first version of this file reported "275 of
+the 276 were called" as though it were notable. **It is exactly the catalog base rate**:
+99.6% of all 15,155 records were called in 30 days, and only 58 records catalogue-wide
+show zero. Invalid rows are **indistinguishable from the catalog on traffic** (median
+calls 2 against 1, mean 17.6 against 20.6). The correct reading is the negative one:
+invalidity neither prevents indexing nor depresses use.
+
+That base rate is itself worth keeping. A catalog that is 99.6% called-within-30-days is
+what an eviction clock running on 30 days of silence would produce, which is the
+mechanism being staked out in `x402-foundation/x402#3045`.
 
 The most common failure is a declared-required key inside `queryParams`. The most
 common single shape is `info.output.type` missing, 121 listings.
