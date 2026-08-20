@@ -85,7 +85,41 @@ Per listing, invalid rows look markedly busier: median 2 against 1, q75 6 agains
 sides. The cause is clustering: **127 of the 276 violations sit on 3 hosts** (81, 33,
 13), and those hosts are busy.
 
-So there is **no host-level relationship** between a declaration failing its own schema
+**Sixth correction: netloc was the wrong clustering unit, and the null does not survive
+the right one.** `payTo` is present on every row and is the operator identity. Clustered
+on it:
+
+| unit | violating | clean | P(violating > clean) | z |
+|---|---|---|---|---|
+| listing | 276 | 14,872 | 0.679 | **10.18** |
+| netloc | 59 | 1,535 | 0.541 | 1.06 |
+| **`payTo`** | **30** | **1,237** | **0.615** | **+2.15** |
+
+Median of operator medians is **4 against 2**. So a **modest operator-level association
+survives**, and the "no relationship" line below is retracted.
+
+netloc is not a conservative netloc-for-operator swap; it errs **in both directions**.
+The zero-call cohort is 51 rows over **14 netloc but 17 `payTo`** (netloc merges
+operators); the violating cohort is 276 listings over **59 netloc but 30 `payTo`** (netloc
+splits them). The unit was raised by novadyne-hq in `#3045`.
+
+**The size confound is absent.** Among clean operators, median calls is **2 whether the
+operator publishes 1 listing (n=559) or 10 or more (n=252)**, so operator size does not
+predict traffic here, and violating operators are barely larger (median 3 listings against
+2). Stratified by size the direction holds in three of four strata (z +1.16, +1.33, -0.51,
++2.00) with none decisive alone.
+
+**What this is not:** causal, or strong. z = +2.15 on 30 clusters. The plausible story is
+that operators shipping more traffic hand-roll and iterate more, and hand-rolled
+declarations break. That is a story, not a result.
+
+**What is untouched:** the 276 itself. It is an **exhaustive enumeration of a closed
+class**, not a sample, so it has no sampling distribution to inflate. Clustering damages
+the significance tests built on the count, not the count.
+
+The retracted claim follows.
+
+~~So there is no host-level relationship~~ between a declaration failing its own schema
 and how much a service is called. The earlier "indistinguishable on traffic" line was
 right by accident: it was read off means, which a few large valid outliers were holding
 up, and the means hid a real rank shift that turns out to be publisher identity.
