@@ -103,11 +103,32 @@ The zero-call cohort is 51 rows over **14 netloc but 17 `payTo`** (netloc merges
 operators); the violating cohort is 276 listings over **59 netloc but 30 `payTo`** (netloc
 splits them). The unit was raised by novadyne-hq in `#3045`.
 
-**The size confound is absent.** Among clean operators, median calls is **2 whether the
-operator publishes 1 listing (n=559) or 10 or more (n=252)**, so operator size does not
-predict traffic here, and violating operators are barely larger (median 3 listings against
-2). Stratified by size the direction holds in three of four strata (z +1.16, +1.33, -0.51,
-+2.00) with none decisive alone.
+**Seventh correction: "the size confound is absent" was wrong, and it was wrong because
+it measured the other quantity.** Operator size does not predict per-listing **intensity**
+(median 2 calls per listing at every size), but it strongly predicts **throughput**:
+novadyne-hq's sweep gives median total calls of 2 / 7 / 14 / **75** across the size bands,
+monotone and 37.5x. The causal story attached to the result was about throughput, so the
+confound was present on the measure the story named.
+
+**Controlled properly, the association survives.** Three ways:
+
+| method | result |
+|---|---|
+| **intensity** (mean calls per listing, size-invariant by construction) | AUC 0.622, **z = +2.29**, medians 4.00 vs 2.14 |
+| **exact-size matching** (each violating operator against clean operators of *identical* listing count) | 28 of 30 matched, **20 wins, 8 losses, 0 ties, p = 0.018** |
+| seven finer strata | direction holds in **6 of 7** testable bands; strongest at 13-20 listings (AUC 0.802, z +2.45) |
+
+**A modelling choice, disclosed because two people can both say "clustered on `payTo`" and
+mean different partitions.** Operator identity here is the **sorted set of distinct `payTo`
+across a listing's `accepts[]`**. That matters because **37.5% of listings quote more than
+one** address (2: 4,389 rows; 3: 240; 4: 1,054; 5: 4), and **138 of the 276 violations**
+are among them. The alternative, union-find over shared addresses, gives 1,200 operators
+against 1,267 and moves nothing: z +2.31, sign test 19-8-1, p 0.026.
+
+**The predicate is published as runnable code** in
+[x402#3045](https://github.com/x402-foundation/x402/issues/3045#issuecomment-5363563707),
+with the any-violation lifting rule, so an independent party can reproduce rather than
+reconstruct.
 
 **What this is not:** causal, or strong. z = +2.15 on 30 clusters. The plausible story is
 that operators shipping more traffic hand-roll and iterate more, and hand-rolled
