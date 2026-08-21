@@ -130,6 +130,44 @@ against 1,267 and moves nothing: z +2.31, sign test 19-8-1, p 0.026.
 with the any-violation lifting rule, so an independent party can reproduce rather than
 reconstruct.
 
+**INDEPENDENTLY REPLICATED.** novadyne-hq ran that predicate mechanically against their
+own sweep, on **three operator partitions that genuinely disagree on 37% of the catalog**
+(our sorted-set key, union-find over shared addresses, and first-in-`accepts`-order, which
+is neither of ours). All three give **30 violating operators** and **z between +2.30 and
++2.33**, and our sorted-set sign test reproduced at exactly **20-8-0**. The partition
+choice was the live worry; it is now measured, three ways, by two parties. Their standing
+flag holds: **6 operators in the 13-to-20 band carry the result.**
+
+**Eighth correction: a bug in the published predicate, found because they asked about the
+denominator.** The `is_violating` gate checked `schema["required"]` plus one level into
+`properties`, while `missing_required` recurses arbitrarily deep. **The gate and the test
+disagreed about which rows were in scope.** Corrected to use the same traversal:
+
+| | evaluated | violating | rate |
+|---|---|---|---|
+| published gate | 14,691 | 276 | 1.88% |
+| **corrected gate** | **14,695** | **276** | **1.88%** |
+
+Four rows wrongly skipped, **zero violations missed**. Real bug, real fix, moves nothing.
+
+**The not-evaluated class is three things, not one.** Of the 464: **260** declare no
+`required` key anywhere reachable, **159** declare `"required": []` - an **explicitly
+empty** array, which asserts *nothing is required* and is a different claim from omitting
+the key - and 45 sit deeper than the old gate looked. `bool([])` collapses the first two,
+so any checker gating on truthiness merges an explicit statement with an absent one. Ours
+did.
+
+**Prevalence, both denominators:** 276/14,695 = **1.88%** of rows where the predicate can
+bind; 276/15,155 = **1.82%** of rows published.
+
+**A standing hazard for every presence claim here.** novadyne-hq caught the catalog serving
+15,171 raw rows containing only 15,041 distinct resources for about five minutes: 130
+listings silently absent, replaced by twins, stable across three sweeps, then cleared. **An
+instrument reading absence off a single sweep would have produced 130 false absences and
+cleared them without explanation.** Our own sweep had **0 duplicate keys** (15,155 raw =
+15,155 distinct), so it was not in that state, but the rule stands: **two sweeps before any
+absence is reported.**
+
 **What this is not:** causal, or strong. z = +2.15 on 30 clusters. The plausible story is
 that operators shipping more traffic hand-roll and iterate more, and hand-rolled
 declarations break. That is a story, not a result.
