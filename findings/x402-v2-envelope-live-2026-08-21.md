@@ -66,6 +66,44 @@ goes missing is the envelope's own `resource`, not anything inside `accepts[]`.
 so it arrives nine endpoints at a time from one publisher. Anyone counting endpoints will
 overstate how many people made the mistake.
 
+## Correction, 2026-08-21, later the same day
+
+**Two numbers above are wrong, and the cause was my own checker.**
+
+It walked each listing's `accepts` array and flagged the listing on the **first entry** that
+did not match the seven v2 fields, then stopped. A listing that offers a **conformant v2
+option alongside a legacy v1 option** therefore counted as a failure, when a v2 client can
+read it perfectly well.
+
+Re-measured, splitting "every entry conformant" from "at least one entry conformant":
+
+| | endpoints |
+|---|---|
+| every `accepts` entry conformant | **38** |
+| **at least one** conformant, plus a legacy option | **2** (one operator) |
+| **no conformant entry at all** | **8**, across **7 domains** |
+
+**So the useful number is that a strict v2 client can pay 40 of 49, which is 82%**, not the
+59% "fully conformant envelope" figure above. Those measure two different questions, and
+the second one is the one an implementer cares about.
+
+**And the `soren.com` claim is withdrawn.** I wrote that two endpoints use
+`maxAmountRequired` **in place of** `amount` and that a strict v2 parser cannot read them at
+all. That is false. They serve **two** options: `accepts[0]` is exactly the seven v2 fields
+with `amount` and a CAIP-2 `network`, and `accepts[1]` is the v1 shape for older clients. I
+highlighted the second and never looked at the first. Deliberate backward compatibility,
+reported as a breaking bug.
+
+**The `resource` finding is unaffected**: 11 endpoints across 3 domains still omit the
+required top-level object, and `soren.com` is not among them.
+
+**The class this belongs to.** Three times in two days a red reading has come from my own
+scaffolding rather than the thing measured: `bool([])` collapsing an explicitly empty
+`required` array into a missing one, `Math.round(pct*100)` failing on ordinary floating
+point, and now a loop that breaks on the first mismatch in an array whose entries are
+alternatives rather than requirements. **Break-on-first-mismatch is wrong wherever the list
+is a set of options.**
+
 ## Limits, stated
 
 One sample of 160 hosts on one morning, 49 usable v2 bodies. Domain is not operator: shared
