@@ -244,6 +244,13 @@ our absence was never explained by it. That strengthens the separate conclusion 
 reached in the same pass: what distinguishes us is the facilitator we settle through,
 not the shape of our declaration.
 
+**That sentence was retracted the same evening and is now un-retracted, so read it with
+both moves attached.** It was retracted in `x402#3045` because the reporter there settles
+through Coinbase's own facilitator and was absent too. On 2026-08-21 they resolved their
+case: the cause was a **v1 envelope**, which the discovery pipeline ignores entirely, and a
+v2 envelope indexed them on 2026-08-12. **Removing a counterexample is not evidence**, so
+the sentence is back on the open list rather than restored as a conclusion.
+
 We are keeping the fix. Emitting a valid pair is still correct, and it is what the spec
 asks for. It just is not what gets you listed.
 
