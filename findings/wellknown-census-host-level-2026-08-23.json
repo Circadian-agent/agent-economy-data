@@ -1,0 +1,3158 @@
+{
+ "artifact": "circadian-wellknown-census-host-level",
+ "observedAt": "2026-08-23T12:08:36.881Z",
+ "note": "CT_UNKNOWN folded into UNINFORMATIVE on novadyne-hq evidence (0 of 261 controls returned 2xx with no content-type, while omission itself occurs 8 times, always on 4xx). originalVerdict preserved per row. PUBLISHER count is unaffected by the fold.",
+ "population": {
+  "hostsProbed": 171,
+  "source": "402index /api/v1/services, strided sample, see repo README"
+ },
+ "summary": {
+  "UNREACHABLE": 10,
+  "PUBLISHER": 115,
+  "NOBODY": 40,
+  "UNINFORMATIVE": 5,
+  "NON_JSON": 1
+ },
+ "rows": [
+  {
+   "host": "47-85-47-24.sslip.io",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "agent-commerce-guard.vercel.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 14016
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 79
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "aeo-audit-api.amdal-dev.workers.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1033
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 109
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "achillesalpha.onrender.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 8992
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "a2a.elonsusk.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   }
+  },
+  {
+   "host": "agent402.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 11251
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 13
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "agent-guild-5d5r.onrender.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 3652
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "2s.io",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 379495
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 525382
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "agenthealthmonitor.xyz",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 20133
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "agentcard.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 78
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "agentbodega.store",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 7510219
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 26
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": true,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "afriref.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 127663
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 65
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "agentkit-x402-buy.netlify.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "text/plain",
+    "bytes": 2993
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 3437
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "agentkit-x402-buy.vercel.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/octet-stream",
+    "bytes": 11230
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 79
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "agents.dyoeway.org",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1430
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 3437
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "agentic.crowdpull.click",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 7510219
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 26
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": true,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "agentpay.tools",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2398
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "agentsonly.vip",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 155
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   }
+  },
+  {
+   "host": "agents.supremeai.ca",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   }
+  },
+  {
+   "host": "agenttrust.uk",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/octet-stream",
+    "bytes": 1223
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 162
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "ai-akari.ai",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 6460
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 24393
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": true,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api-dev.intra-tls2.dctx.link",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 88
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 105
+   }
+  },
+  {
+   "host": "api.agentfund.online",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 88
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 105
+   }
+  },
+  {
+   "host": "api-v3qhpbwutp.august.services",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 946
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 49
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.carbon-cashmere.de",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 36286
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 140
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.400860.xyz",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 37312
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "api.celtagrupo.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 162
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 162
+   }
+  },
+  {
+   "host": "api.clawfetch.ai",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 4315
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "api.delx.ai",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 6072619
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 9
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": true,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.060504.shop",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 447
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.hergertsynthora.com",
+   "verdict": "UNINFORMATIVE",
+   "originalVerdict": "CT_UNKNOWN",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 4808
+   },
+   "ctrl": {
+    "status": 200,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "api.cn402.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2878
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "agentready-audit.seshiccse023.chatgpt.site",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 33119
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 20579
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.itsgloria.ai",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 155
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   }
+  },
+  {
+   "host": "api.ingest0r.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 6745
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 42
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.gocreativeai.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 467558
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.oblique.markets",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 15886
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 3229
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.immuta.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1996
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.octodamus.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 8226
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.myceliasignal.com",
+   "verdict": "NON_JSON",
+   "originalVerdict": "NON_JSON",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 174594
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 162
+   }
+  },
+  {
+   "host": "api.osf-master-server.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 29604
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "api.positionflow.ai",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 155
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   }
+  },
+  {
+   "host": "api.slamai.dev",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/problem+json",
+    "bytes": 339
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/problem+json",
+    "bytes": 356
+   }
+  },
+  {
+   "host": "api.questflow.ai",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 88
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 105
+   }
+  },
+  {
+   "host": "api.signalfuse.co",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 6755
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "api.swedata.org",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   }
+  },
+  {
+   "host": "api.quotenorm.ai",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 155
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   }
+  },
+  {
+   "host": "api.tantra-authority.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 32
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 32
+   }
+  },
+  {
+   "host": "api.strale.io",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 18327
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 94
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.tcgapi.dev",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 401,
+    "ct": "application/json",
+    "bytes": 102
+   },
+   "ctrl": {
+    "status": 401,
+    "ct": "application/json",
+    "bytes": 102
+   }
+  },
+  {
+   "host": "api.timzinin.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 78800
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "api.tickersfeed.net",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 3329
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 23
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "apiacre.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 689512
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": true,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "api.x402node.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 25705
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "base-onchain-tools.dolerite.workers.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 8108
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 13
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "blocksearch.dev",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 9427
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 9427
+   }
+  },
+  {
+   "host": "api.zaroniacalculator.co.za",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 950
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 65
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "binance-ticker24.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 85
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "brandontan.app",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "businessrisk.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 81
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "butterflydelta.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1029
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 13283
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "circadian-agent.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 3451
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 14706
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "coc-shop-prod.fawesome-hypercasual.workers.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 417
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 9
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "clawdmint-api.vercel.app",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 500,
+    "ct": "text/plain",
+    "bytes": 96
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 79
+   }
+  },
+  {
+   "host": "clonecho.builda.company",
+   "verdict": "UNINFORMATIVE",
+   "originalVerdict": "UNINFORMATIVE",
+   "real": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 814
+   },
+   "ctrl": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 814
+   }
+  },
+  {
+   "host": "coc-shop.fawesome-hypercasual.workers.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 392
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 9
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "codex-rapid-patch-evidence.vercel.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 10164
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "contractwatch.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 82
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "convrgent.ai",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1862
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 19044
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "data.crestsystems.ai",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "comply402.onrender.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   }
+  },
+  {
+   "host": "cryptonews.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 79
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "defidata.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 77
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "deliver.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 76
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "derivbundle.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 80
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "dex-pair-price.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 83
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "dyoe-audit-verify.netlify.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1430
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 3437
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "fiatdock.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 39310
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 110
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "foot-sept-oil-til.trycloudflare.com",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "fear-greed.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 79
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "emc2ai.io",
+   "verdict": "UNINFORMATIVE",
+   "originalVerdict": "UNINFORMATIVE",
+   "real": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 11880
+   },
+   "ctrl": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 11880
+   }
+  },
+  {
+   "host": "funding-rates.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 82
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "gateway-production-2cc2.up.railway.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2398
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "forex-latest.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 81
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "global-chat.io",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 54
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 26573
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "gifu-server.onrender.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 155
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   }
+  },
+  {
+   "host": "global-econ-x402-production.up.railway.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 17500
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "globalapi.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 18072
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "global-econ-x402-staging.up.railway.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 18853
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "gateway.apiosk.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 79049
+   },
+   "ctrl": {
+    "status": 400,
+    "ct": "application/json",
+    "bytes": 99
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "httpay.xyz",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 402,
+    "ct": "text/plain",
+    "bytes": 78
+   },
+   "ctrl": {
+    "status": 402,
+    "ct": "text/plain",
+    "bytes": 78
+   }
+  },
+  {
+   "host": "imagcon.app",
+   "verdict": "UNINFORMATIVE",
+   "originalVerdict": "UNINFORMATIVE",
+   "real": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 90159
+   },
+   "ctrl": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 90159
+   }
+  },
+  {
+   "host": "jp-data-api-production.up.railway.app",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 101
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 101
+   }
+  },
+  {
+   "host": "llm402.ai",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "mail.cusethejuice.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 107
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 107
+   }
+  },
+  {
+   "host": "library.proofivy.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   }
+  },
+  {
+   "host": "makespdf.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 207
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 11126
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "gpt55.558686.xyz",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 109736
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 52
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "market-dominance.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 85
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "agent402.co.uk",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "mcp.gapup.io",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 313315
+   },
+   "ctrl": {
+    "status": 405,
+    "ct": "application/json",
+    "bytes": 30
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "md.fastdb.in",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1521
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 68
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "mcpfax-utility.bowling-anthony.workers.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2236
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 188
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "mcpscan.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 76
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "mobilitychain.kr",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 64
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 4020
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "mtasts.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 75
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "midax402.onrender.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 18917
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "npm-guardian.vercel.app",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 107
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 107
+   }
+  },
+  {
+   "host": "nwb-vending.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 11274
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "",
+    "bytes": 0
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "netintel.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 282776
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 153
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "netintel-production-440c.up.railway.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 282776
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 153
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "ohlcv-candles.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 82
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "onchain.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 76
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "openinterest.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 78
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "nut402.codenut.xyz",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 9
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 9
+   }
+  },
+  {
+   "host": "padelmaps.org",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2937
+   },
+   "ctrl": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 1855
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "perps.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 74
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "permit-api-production-7375.up.railway.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2541
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "api.brazilmcp.dev",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "planets.agentexchange.work",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2476
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 42
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "polymarket-markets.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 87
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "pay.ansht.tech",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 4220
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 13
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "proofwork-the402-webhook.phase-voice.workers.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 14039
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 21
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "pro-api.coinmarketcap.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 79
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 79
+   }
+  },
+  {
+   "host": "protocol-tvl.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 81
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "proxy.suverse.io",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 162
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 162
+   }
+  },
+  {
+   "host": "pro-api.coingecko.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "r2-x402-manifest-audit.dragonfly27.workers.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 44
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 21
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "restricted-party-screen.vercel.app",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 107
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/plain",
+    "bytes": 107
+   }
+  },
+  {
+   "host": "resume-agent-runs.website-findings.workers.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 595
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 21
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "robotinsight.kr",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 63
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 4972
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "orionkr.xyz",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 69018
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "rpc-ens.hergertsynthora.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 76
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "socialintel.dev",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 107
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "scry.solanahub.de",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 558467
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 21
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "staging.toolkit.dev",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 19560
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 19560
+   }
+  },
+  {
+   "host": "store.agentexchange.work",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 186471
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 265
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "supplements-retrieved-sized-outreach.trycloudflare.com",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "signal-engine-production-d88d.up.railway.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 6755
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "sgpropertydata.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   }
+  },
+  {
+   "host": "tensorfeed.ai",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 792945
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 35687
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": true,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "three.ws",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 192
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 9254
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "thesealer.xyz",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 4450
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 8862
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "scout.hugen.tokyo",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2098
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "transform-balanced-trunk-remedies.trycloudflare.com",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "theloopbreaker.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 17345
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 17362
+   }
+  },
+  {
+   "host": "tiresapi.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 168675
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 691
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "twitter.surf.cascade.fyi",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1258
+   },
+   "ctrl": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 4982
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "www.commandclaw.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 530,
+    "ct": "text/html",
+    "bytes": 7649
+   },
+   "ctrl": {
+    "status": 530,
+    "ct": "text/html",
+    "bytes": 7649
+   }
+  },
+  {
+   "host": "workbot1.oddsys.org",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 20870
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 295
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "www.cloudworldmodel.ai",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 3880
+   },
+   "ctrl": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 3727
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "www.genbase.fun",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 13826
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 13826
+   }
+  },
+  {
+   "host": "www.joshhorneman.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 33742
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 33742
+   }
+  },
+  {
+   "host": "vvc032z10fqp.shares.zrok.io",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 502,
+    "ct": "text/html",
+    "bytes": 4574
+   },
+   "ctrl": {
+    "status": 502,
+    "ct": "text/html",
+    "bytes": 4574
+   }
+  },
+  {
+   "host": "www.shirt.sh",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 1475
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 17270
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "x402.agentutility.ai",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 156
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 222
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "x402-endpoints.onrender.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 179797
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": true,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "trading-x402.rivr.workers.dev",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   }
+  },
+  {
+   "host": "x402.cultofjames.org",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 569
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 22
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "x402.api.agentmail.to",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 402,
+    "ct": "application/json",
+    "bytes": 28
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 133
+   }
+  },
+  {
+   "host": "x402-wallet-readiness-service.vercel.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 2720
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "x402.aurelianflo.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 34037
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": false,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": true,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "x402.compacthost.com",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 21
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 21
+   }
+  },
+  {
+   "host": "x402.shizu.me",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 54805
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 379
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "x402.yruz.one",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 530,
+    "ct": "text/html",
+    "bytes": 7631
+   },
+   "ctrl": {
+    "status": 530,
+    "ct": "text/html",
+    "bytes": 7631
+   }
+  },
+  {
+   "host": "x402.professorsausages.com",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 37376
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 52
+   },
+   "hasX402Version": false,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "api.tradeperpetua.xyz",
+   "verdict": "UNREACHABLE",
+   "originalVerdict": "UNREACHABLE",
+   "real": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   },
+   "ctrl": {
+    "status": 0,
+    "ct": "",
+    "bytes": 0
+   }
+  },
+  {
+   "host": "x402.payperbyte.io",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 14254
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "application/json",
+    "bytes": 148
+   },
+   "hasX402Version": true,
+   "hasVersion": false,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": true
+  },
+  {
+   "host": "x402engine.app",
+   "verdict": "PUBLISHER",
+   "originalVerdict": "PUBLISHER",
+   "real": {
+    "status": 200,
+    "ct": "application/json",
+    "bytes": 302459
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   },
+   "hasX402Version": true,
+   "hasVersion": true,
+   "hasKind": false,
+   "resourcesAllStrings": false,
+   "resourcesAllObjects": false
+  },
+  {
+   "host": "x402render.vercel.app",
+   "verdict": "NOBODY",
+   "originalVerdict": "NOBODY",
+   "real": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 155
+   },
+   "ctrl": {
+    "status": 404,
+    "ct": "text/html",
+    "bytes": 172
+   }
+  },
+  {
+   "host": "x402factory.ai",
+   "verdict": "UNINFORMATIVE",
+   "originalVerdict": "UNINFORMATIVE",
+   "real": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 2399
+   },
+   "ctrl": {
+    "status": 200,
+    "ct": "text/html",
+    "bytes": 2399
+   }
+  }
+ ]
+}
