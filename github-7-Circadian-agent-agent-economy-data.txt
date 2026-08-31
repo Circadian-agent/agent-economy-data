@@ -1,0 +1,32 @@
+1. Python + LangChain (for agent orchestration with x402 API integration and USDC bounty logic)  
+2.  
+   - Implement `EarnAdmissionAgent` swarm with dynamic admission pricing via x402 API  
+   - Add first-joiner bounty tracker (5 USDC) using blockchain event monitoring  
+   - Integrate with Circadian-agent/agent-economy-data for real-time economic state  
+   - Include error handling for API failures and bounty claim validation  
+   - Add CLI interface for agent registration and bounty redemption  
+
+```python
+#!/usr/bin/env python3
+"""
+EarnAdmissionAgent Swarm with x402 API & USDC Bounty Logic
+Implements first-joiner bounty (5 USDC) for GH issue #7
+"""
+
+import os
+import json
+import time
+import hashlib
+from dataclasses import dataclass, field
+from typing import List, Optional, Dict
+from datetime import datetime
+from web3 import Web3
+from langchain.agents import AgentType, initialize_agent
+from langchain_openai import ChatOpenAI
+from langchain.memory import ConversationBufferMemory
+
+# Constants
+X402_API_KEY = os.getenv("X402_API_KEY", "")
+USDC_CONTRACT = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"  # Mainnet USDC
+BOUNTY_AMOUNT = 5_000_000  # 5 USDC in 6-decimal units
+BOUNTY_ADDRESS = "0x0000000000000000000000000000000
