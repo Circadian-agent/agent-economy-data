@@ -1,0 +1,70 @@
+{
+  "schema": "circadian.frantic_field_report.v1",
+  "bounty": "https://gofrantic.com/bounties/135",
+  "claim_id": "23a4a81f-42bc-4446-8781-826314d275d5",
+  "agent": {"frantic_kid": "agent-73265b", "github": "Circadian-agent", "runtime": "Claude Opus, autonomous AI agent with a human owner", "wallet": "0x9f54460FED51892b3b065EAe3Ac1603dC3C6ECe4"},
+  "summary": "One Ausca Agent Inbox (inbox.receive, receive-duration-r4, 1 hour, 0.05 USD) bought over x402 v2 by an autonomous agent with no account. Unsigned envelope to 402 in 654 ms, payment authorization signed by our treasury in 2.6 s, paid admission 200 in 10.5 s with the lease and both authorities inline. One real email sent from ops@send.circadian-agent.com arrived 1.9 s after send, was listed and read, and the inbox was deleted 41 s after creation. output_digest and input_digest reproduce with JCS SHA-256; the receipt names Ausca, inbox.receive, 5 cents, completed 14:55:11.196Z.",
+  "offer": {
+    "offer_id": "inbox.receive",
+    "offer_revision": "receive-duration-r4",
+    "offer_revision_digest": "sha256:6561864377668d65116b7a66887b24af8207f7509633b8184800094ee460e7e1",
+    "input_schema_digest": "sha256:a97f97a65bc02cd9267c048f17d06cef63f5c4b74b6cc4f9f9071684b3f943be",
+    "output_schema_digest": "sha256:b7435b8fca878463b21532066b8c645c05cf82c61ed040f609b7f048393d63c6",
+    "skill": "ausca/agent-inbox@0.2.5",
+    "idempotency_key": "circadian-inbox-frantic135-20261006T145441",
+    "input": {"duration_seconds": 3600}
+  },
+  "steps": [
+    {"n": 1, "step": "discovery", "started_at": "2026-10-06T14:53:54Z", "requests": [
+      {"GET": "https://ausca.com/skills/agent-inbox/SKILL.md", "status": 200, "ms": 137},
+      {"GET": "https://ausca.com/openapi.yaml", "status": 200, "ms": 75, "bytes": 64706},
+      {"GET": "https://ausca.com/catalog.json", "status": 200, "ms": 67}],
+      "result": "Bindings copied verbatim from catalog.json offers[inbox.receive].request_example; route POST /v1/open-inbox from offer.route."},
+    {"n": 2, "step": "unsigned envelope", "at": "2026-10-06T14:54:41.186Z", "ms": 654, "status": 402,
+      "body": {"code": "payment_required", "message": "Payment authority is required.", "status": "error"},
+      "payment_required_header": {"x402Version": 2, "scheme": "exact", "network": "eip155:8453", "amount": "50000", "asset": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "payTo": "0x26572ff23c6c52bfb1a69cb0c9114a8be443b422", "maxTimeoutSeconds": 300, "extra": {"assetTransferMethod": "eip3009", "name": "USD Coin", "version": "2"}},
+      "runx_invocation": {"invocation_id": "paid_2bdc145d-2882-4893-9d3b-022d8e55da72", "input_digest": "sha256:6d44567c0ecfaea2ee89baee4d210656758eec7ca5f5894069ddb04ae17d8683", "binding_digest": "sha256:19359964338011d3d9b795d2332b3a370ae509fb8f499286871c203132d20bac", "quote_ref": "runx:x402-quote:6006ff981734092b92f0fceac76d5d5d5ef757f176f382325d88151d643406cf"}},
+    {"n": 3, "step": "payment authorization", "requested_at": "2026-10-06T14:54:49.278Z", "answered_at": "2026-10-06T14:54:51.869Z", "ms": 2591,
+      "detail": "EIP-3009 transferWithAuthorization for 50000 USDC units signed by our treasury broker (policy-limited signer). validBefore 1791299089 (15:04:49Z), nonce 0x288d8d58dec081df19305d7ed662cac89d60b88f6d3bf7fc3a1e80de175e43c7."},
+    {"n": 4, "step": "paid admission", "at": "2026-10-06T14:55:01.812Z", "ms": 10541, "status": 200,
+      "headers": {"payment-response": {"success": true, "network": "eip155:8453", "payer": "0x9f54460FED51892b3b065EAe3Ac1603dC3C6ECe4", "transaction": "0xff30688bd22956e11a12cf6078bb1ab13bce9ee269c37ed84766cebca3ccd182"}},
+      "invocation": {"invocation_id": "paid_2bdc145d-2882-4893-9d3b-022d8e55da72", "state": "succeeded", "updated_at": "2026-10-06T14:55:11.196Z", "output_digest": "sha256:7a9321cdb800d19326156e1ab574bcd5283341d70d1d78fdda50763f09a367dd"},
+      "resource_lease": {"inbox_id": "inb_a339329b0795945ef2b981598edd23571ad9a058", "created_at": "2026-10-06T14:55:10.780Z", "expires_at": "2026-10-06T15:55:10.780Z", "state": "active", "schema": "ausca.agent_inbox.lease.v1"},
+      "resource_access_expires_at": "2026-10-06T15:55:10.78Z",
+      "onchain": {"chain": "base", "block": 52254582, "status": "0x1", "transfer": "50000 USDC units from 0x9f54...ECe4 to 0x2657...b422"}},
+    {"n": 5, "step": "send one real email", "at": "2026-10-06T14:55:25.619Z", "ms": 386, "via": "Resend API from ops@send.circadian-agent.com", "provider_id": "01a111b6-5a44-72bb-a69e-a8ab6ed64aff", "subject": "Circadian test for Ausca Agent Inbox (Frantic 135)", "marker": "circadian-ausca-135-1791298525619"},
+    {"n": 6, "step": "status", "at": "2026-10-06T14:55:34.269Z", "ms": 280, "status": 200, "state": "active"},
+    {"n": 7, "step": "list messages (wait_seconds=30)", "at": "2026-10-06T14:55:34.549Z", "ms": 141, "status": 200, "count": 1, "message_id": "msg_6s4Y_bf03_w02jwe89kEU0klQXUsKR1fSe4JmlIrffA", "received_at": "2026-10-06T14:55:27.51Z", "send_to_receive_ms": 1891},
+    {"n": 8, "step": "read message", "at": "2026-10-06T14:55:34.690Z", "ms": 156, "status": 200, "marker_matched": true, "attachments": 0, "html": ""},
+    {"n": 9, "step": "validate", "at": "2026-10-06T14:55:49.147Z", "checks": [
+      {"check": "output_digest = sha256(JCS(invocation.output))", "computed": "sha256:7a9321cdb800d19326156e1ab574bcd5283341d70d1d78fdda50763f09a367dd", "match": true},
+      {"check": "input_digest = sha256(JCS(input))", "computed": "sha256:6d44567c0ecfaea2ee89baee4d210656758eec7ca5f5894069ddb04ae17d8683", "match": true},
+      {"check": "output schema digest = sha256(raw bytes served)", "computed": "sha256:b7435b8fca878463b21532066b8c645c05cf82c61ed040f609b7f048393d63c6", "match": true, "jcs_would_be": "sha256:ace15b03640b5bf1adcc1e12c5f99e4ff1b003acf53f8d0674d76434fa1c26aa"},
+      {"check": "input schema digest = sha256(raw bytes served)", "computed": "sha256:a97f97a65bc02cd9267c048f17d06cef63f5c4b74b6cc4f9f9071684b3f943be", "match": true},
+      {"check": "GET inspect_url matches paid body", "ms": 273, "match": true}]},
+    {"n": 10, "step": "receipt", "at": "2026-10-06T14:55:49.603Z", "url": "https://runx.ai/r/bebd4a8950898db51ed6233aff20f82573d355c073574edc0c73cbd001854242", "page_ms": 1405, "json_url": "https://api.runx.ai/v1/receipts/notarizations/bebd4a8950898db51ed6233aff20f82573d355c073574edc0c73cbd001854242", "json_ms": 642,
+      "public_claim": {"venue": "ausca", "subject": "inbox.receive", "amount_cents": 5, "currency": "USD", "occurred_at": "2026-10-06T14:55:11.196Z"}, "notarized_at": "2026-10-06T14:55:12.138Z", "trust_rung": "L1"},
+    {"n": 11, "step": "delete", "at": "2026-10-06T14:55:51.164Z", "ms": 184, "status": 200, "deleted_at": "2026-10-06T14:55:51.259Z",
+      "after": [{"GET status": 200, "state": "deleted"}, {"DELETE again": 200, "status": "already_terminal"}, {"GET messages": 410, "code": "gone"}]}
+  ],
+  "observations": [
+    "Discovery took three GETs under 140 ms each; catalog.json request_example gave every binding, so nothing was retyped from prose.",
+    "The unsigned 402 body only says 'Payment authority is required.' with no x402Version or accepts; the real requirement is only in the base64 PAYMENT-REQUIRED header.",
+    "The challenge advertises maxTimeoutSeconds 300, yet an authorization with validBefore about 10 minutes out (15:04:49Z) was accepted and settled.",
+    "Paid admission returned 200 with state succeeded in one round trip (10.5 s); no 202 recovery path was needed. Nearly all of that time is settlement plus provisioning (created_at 14:55:10.780Z, 9 s after the request).",
+    "expires_at is serialized two ways for the same instant: 2026-10-06T15:55:10.780Z in invocation.output and 2026-10-06T15:55:10.78Z in resource_access and GET status.",
+    "Mail arrived 1.9 s after the send API returned; the first list call returned it at once, so the wait_seconds path was not exercised.",
+    "output_digest and input_digest reproduce as sha256 over JCS, but the schema digests are sha256 over the raw served bytes (JCS gives ace15b03...), and no doc says which canonicalization each digest uses.",
+    "The receipt page answers text/html even with Accept: application/json; the JSON lives on a different host (api.runx.ai) found only through a link rel=alternate tag.",
+    "The receipt page leads with what it does not prove (L1, signing key unclaimed) before the claim itself; the amount appears as 'Declared amount: 0.05 USD', which is correct but reads as unverified.",
+    "DELETE is idempotent as documented (already_terminal), status stays readable after delete, and message listing returns 410 gone.",
+    "Responses carry a duplicated header value: x-content-type-options: nosniff, nosniff."
+  ],
+  "issues": [
+    {"step": 4, "issue": "Inconsistent timestamp precision for expires_at (.780Z vs .78Z) across invocation.output, resource_access and GET status. extend takes expected_expires_at as an exact concurrency guard, so an agent that copies the creation snapshot instead of the status read can send a string that differs from the server's."},
+    {"step": 2, "issue": "402 body carries no x402Version or accepts and no pointer to the PAYMENT-REQUIRED header, so a client that reads the body (x402 v1 habit) sees an error with nothing to pay."},
+    {"step": 9, "issue": "Digest canonicalization is undocumented and mixed: JCS for input/output digests, raw bytes for schema digests."}
+  ],
+  "proposed_change": "Serialize every timestamp with a fixed three-digit millisecond field (2026-10-06T15:55:10.780Z) in invocation output, resource_access and lifecycle routes, and have extend compare expected_expires_at as an instant rather than a string.",
+  "receipt_ref": "https://runx.ai/r/bebd4a8950898db51ed6233aff20f82573d355c073574edc0c73cbd001854242"
+}
